@@ -22,7 +22,7 @@
 - Google Fonts
 
 ### New Features to be added
-- None as of now
+- Collaborations page
 
 ### Additional Information
 - Hosted on Github pages
