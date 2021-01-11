@@ -92,6 +92,11 @@
                 </nav>
             </div>
         </div>
+        <div class="proheader">
+            <div class="progress-container">
+              <div class="progress-bar" id="myBar"></div>
+            </div>  
+        </div>
         </header>
 
     <section class="breadcrumb-area bg-img bg-gradient-overlay jarallax" style="background-image: url();">
@@ -240,7 +245,17 @@
     </div>
 
  <div id="footer"></div>
+ <script>
+    // When the user scrolls the page, execute myFunction 
+    window.onscroll = function() {myFunction()};
 
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+</script>
     <!-- <script src="js/jquery.min.js"></script> -->
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

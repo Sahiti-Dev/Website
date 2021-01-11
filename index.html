@@ -86,9 +86,10 @@
          <div class="loadbar">
                  <div id="fill"></div>
          </div>
-</div>
+    </div>
 
     <header class="header-area">
+        
         <div class="classy-nav-container breakpoint-off">
             <div class="container">
                 <nav class="classy-navbar justify-content-between" id="conferNav">
@@ -104,7 +105,7 @@
                         <div class="classynav">
                             <ul id="nav">
                                 <li class="active"><a href="#">Home</a></li>
-                               <li ><a href="board.html">Board</a></li>
+                                <li><a href="board.html">Board</a></li>
                                 <li><a href="events.html">Events</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
@@ -113,6 +114,12 @@
                     </div>
                 </nav>
             </div>
+        </div>
+        <div class="proheader">
+            
+            <div class="progress-container">
+              <div class="progress-bar" id="myBar"></div>
+            </div>  
         </div>
         </header>
   
@@ -620,7 +627,7 @@ if (!sessionStorage.isVisited) {
 	  $(".loadmain").hide();}
 
 </script>
-
+    
    <script src="js/events/validation.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -628,6 +635,16 @@ if (!sessionStorage.isVisited) {
     <script src="js/default-assets/active.js"></script>
     <script src="js/jquery.countTo.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        // When the user scrolls the page, execute myFunction 
+        window.onscroll = function() {myFunction()};
 
+        function myFunction() {
+          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          var scrolled = (winScroll / height) * 100;
+          document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
 </body>
 </html>
