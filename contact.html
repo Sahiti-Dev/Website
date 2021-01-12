@@ -66,6 +66,11 @@ video{
 
 <body>
     <header class="header-area">
+        <div class="progress1">
+            <div class="progress-container">
+              <div class="progress-bar" id="myBar"></div>
+            </div>  
+        </div>
         <div class="classy-nav-container breakpoint-off">
             <div class="container">
                 <nav class="classy-navbar justify-content-between" id="conferNav">
@@ -215,6 +220,17 @@ video{
     </div>
 
   <div id="footer"></div>
+  <script>
+    // When the user scrolls the page, execute myFunction 
+    window.onscroll = function() {myFunction()};
+    
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+    </script>
     <script src="js/events/validation.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
