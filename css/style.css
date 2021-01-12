@@ -29,21 +29,37 @@ you can use the generic selector below, but it's slower:
 [class*="your-class-prefix"] {
 */
 
+/*for sponsor animation*/
+.swiper-container {
+	width: 100%;
+	padding-top: 70px;
+	padding-bottom: 70px;
+	
+  }
+
+  .swiper-slide {
+	  background-position: center;
+	  background-size: cover;
+	  background-color: #ffffff;
+	  width: 330px;
+	  height: 330px;
+	  -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0006);
+  }
 .progress1 {
 	position: fixed;
-	top: 70px;
+	top: 68px;
 	z-index: 1;
 	width: 100%;
 	
 }
 .progress-container {
 	width: 100%;
-	height: 8px;
+	height: 6px;
 	
 }
   
 .progress-bar {
-	height: 8px;
+	height: 6px;
 	background: #4caf50;
 	width: 0%;
 }
