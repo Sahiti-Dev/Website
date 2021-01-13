@@ -32,7 +32,7 @@
 	<meta name="description" content="Sahiti | Telugu Literary Association of VIT Vellore">
 	<meta name="twitter:site" content="">
 
-
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css?version=5">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
@@ -82,7 +82,7 @@
          <div class="loadtitle">
                SAHITI TLA
          </div>
- 
+        
          <div class="loadbar">
                  <div id="fill"></div>
          </div>
@@ -407,8 +407,8 @@
                     </div>
                 </div>
             </div>
-
-            <div class="row">
+            
+            <!-- <div class="row">
                 <div class="col-12">
                     <div class="our-sponsor-area d-flex flex-wrap">                 
                         <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
@@ -441,9 +441,24 @@
                         <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
                             <a href="#"><img src="Photos/Sponsors/swagath-1.png" alt=""></a>
                         </div>
-                    </div>
+                    </div> 
                 </div>
+            </div> -->
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img style="width: 200px; height: 300px; margin-left: 55px;" src="Photos/Sponsors/pepsi.png"></div>
+              <div class="swiper-slide"><img style="margin-top: 100px;" src="Photos/Sponsors/creamo.png"></div>
+              <div class="swiper-slide"><img style="margin-top: 120px;" src="Photos/Sponsors/spiro.png"></div>
+              <div class="swiper-slide"><img style="margin-top: 30px;" src="Photos/Sponsors/asp.png"></div>
+              <div class="swiper-slide"><img style="margin-top: 110px;" src="Photos/Sponsors/kanna.png"></div>
+              <div class="swiper-slide"><img style="margin-top: 90px; margin-left: 55px;" src="Photos/Sponsors/abhi-bus.png"></div>
+              <div class="swiper-slide"><img style="margin-top: 120px;" src="Photos/Sponsors/benzz.svg"></div>
+              <div class="swiper-slide"><img style="margin-top: 70px;" src="Photos/Sponsors/create-1.png"></div>
+              <div class="swiper-slide"><img style="margin-top: 70px;" src="Photos/Sponsors/chef-1.png"></div>
+              <div class="swiper-slide"><img style="margin-top: 70px;" src="Photos/Sponsors/swagath-1.png"></div>
             </div>
+              
         </div>
     </section>
     
@@ -636,6 +651,45 @@ if (!sessionStorage.isVisited) {
       document.getElementById("myBar").style.width = scrolled + "%";
     }
     </script>
+    <script>
+        document.querySelector('body').addEventListener('mousemove',eyeball);
+        function eyeball() {
+            var eye = document.querySelectorAll('.eye');
+            eye.forEach(function (eye) {
+                let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2)
+                let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2)
+                let radian = Math.atan2(event.pageX - x, event.pageY - y)
+                let rot = (radian * (180 / Math.PI) * -1) + 270;
+                eye.style.transform = "rotate("+ rot + "deg)";
+            })
+            
+        }
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+            rotate: 20,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows: true,
+          },
+          loop: true,
+          autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+          pagination: {
+            el: '.swiper-pagination',
+          },
+        });
+      </script>
+    
     <script src="js/events/validation.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
