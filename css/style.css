@@ -33,8 +33,7 @@ you can use the generic selector below, but it's slower:
 .swiper-container {
 	width: 100%;
 	padding-top: 70px;
-	padding-bottom: 70px;
-	
+	padding-bottom: 200px;
 }
 
 .swiper-slide {

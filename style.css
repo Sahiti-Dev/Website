@@ -115,8 +115,7 @@ ul {
   background-position: center center !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
-  
- }
+}
 
 .jarallax {
   position: relative;
@@ -2448,6 +2447,8 @@ height: 40px;
     display: none;
   }
 }
+
+
 
 .loadtext{
   align-items: center;
