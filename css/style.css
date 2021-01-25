@@ -29,22 +29,7 @@ you can use the generic selector below, but it's slower:
 [class*="your-class-prefix"] {
 */
 
-/*for sponsor animation*/
-.swiper-container {
-	width: 100%;
-	padding-top: 70px;
-	padding-bottom: 200px;
-}
 
-.swiper-slide {
-	background-position: center;
-	background-size: cover;
-	background-color: #ffffff;
-	width: 330px;
-	height: 330px;
-	-webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0006);
-	
-}
 
 
 

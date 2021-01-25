@@ -32,11 +32,11 @@
 	<meta name="description" content="Sahiti | Telugu Literary Association of VIT Vellore">
 	<meta name="twitter:site" content="">
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css?version=5">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171588218-1"></script>
@@ -408,7 +408,7 @@
                 </div>
             </div>
             
-            <!-- <div class="row">
+            <div class="row">
                 <div class="col-12">
                     <div class="our-sponsor-area d-flex flex-wrap">                 
                         <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
@@ -443,23 +443,8 @@
                         </div>
                     </div> 
                 </div>
-            </div> -->
-        </div>
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img style="width: 200px; height: 300px; margin-left: 55px;" src="Photos/Sponsors/pepsi.png"></div>
-              <div class="swiper-slide"><img style="margin-top: 100px;" src="Photos/Sponsors/creamo.png"></div>
-              <div class="swiper-slide"><img style="margin-top: 120px;" src="Photos/Sponsors/spiro.png"></div>
-              <div class="swiper-slide"><img style="margin-top: 30px;" src="Photos/Sponsors/asp.png"></div>
-              <div class="swiper-slide"><img style="margin-top: 110px;" src="Photos/Sponsors/kanna.png"></div>
-              <div class="swiper-slide"><img style="margin-top: 90px; margin-left: 55px;" src="Photos/Sponsors/abhi-bus.png"></div>
-              <div class="swiper-slide"><img style="margin-top: 120px;" src="Photos/Sponsors/benzz.svg"></div>
-              <div class="swiper-slide"><img style="margin-top: 70px;" src="Photos/Sponsors/create-1.png"></div>
-              <div class="swiper-slide"><img style="margin-top: 70px;" src="Photos/Sponsors/chef-1.png"></div>
-              <div class="swiper-slide"><img style="margin-top: 70px;" src="Photos/Sponsors/swagath-1.png"></div>
             </div>
-              
-        </div>
+        </div>   
     </section>
     
 <section class="container-fluid our-sponsor-client-area bg-img bg-gradient-overlay section-padding-100">
@@ -469,7 +454,7 @@
         </div>
     </div>
     
-        <div class="gallery-utube">
+        <!-- <div class="gallery-utube">
             <div class="single-video">
                 <figure>
                   <li class="uvideo">
@@ -522,7 +507,80 @@
                       </li> 
             </figure>
             </div>
-          </div>
+        </div> -->
+        <div class="owl-carousel owl-theme">
+             
+            <div class="item">
+                <figure>
+                    <li class="uvideo">
+                    <a href="https://youtu.be/Ana_kgzNJZo" target="_blank">
+                        <img class="img-responsive" src="Photos/utube/1.jpg" alt="Sahiti Youtube">
+                      </a>   
+                      <p class="utube-text">After Movie 2K20</p>
+                      </li>
+                </figure>
+                
+            </div>
+            <div class="item">
+                <figure>
+                    <li class="uvideo">
+                        <a href="https://www.youtube.com/watch?v=LnMLuAGau1U" target="_blank">
+                            <img class="img-responsive" src="Photos/utube/5.jpg" alt="Sahiti Youtube">
+                            </a> 
+                          <p class="utube-text">Nuvve Nuvve Kamini Song</p>  
+                          </li> 
+                </figure>
+            </div>
+            <div class="item">
+                <figure>
+                    <li class="uvideo">
+                        <a href="https://www.youtube.com/watch?v=MXP7dG3henc" target="_blank">
+                            <img class="img-responsive" src="Photos/utube/4.png" alt="Sahiti Youtube">
+                            </a> 
+                          <p class="utube-text">Sahiti Dance Team</p>  
+                          </li> 
+                </figure>
+            </div>
+            <div class="item">
+                <figure>
+                    <li class="uvideo">
+                    <a href="https://youtu.be/Gk7TK6Uk0dw" target="_blank">
+                        <img class="img-responsive" src="Photos/utube/111.jpg" alt="Sahiti Youtube">
+                        </a>   
+                      <p class="utube-text">Single Pasanga X Hoyna Hoyna </p>
+                      </li>
+                </figure>
+            </div>
+            <div class="item">
+                <figure>
+                    <li class="uvideo">
+                        <a href="https://youtu.be/twoZl-HLiiU" target="_blank">
+                            <img class="img-responsive" src="Photos/utube/2.jpg" alt="Sahiti Youtube">
+                            <!-- <div class="demo-gallery-poster">
+                              <img src="Photos/core/play-button.png" alt="Sahiti Youtube">
+                            </div> -->
+                          </a> 
+                          <p class="utube-text">2018 Freshers orientation </p>  
+                          </li>   
+                </figure>
+            </div>
+            <div class="item">
+                <figure>
+                    <li class="uvideo">
+                        <a href="https://youtu.be/i-VBMMISFa0" target="_blank">
+                            <img class="img-responsive" src="Photos/utube/3.jpg" alt="Sahiti Youtube">
+                            <!-- <div class="demo-gallery-poster">
+                              <img src="Photos/core/play-button.png" alt="Sahiti Youtube">
+                            </div> -->
+                          </a> 
+                          <p class="utube-text">2017 Freshers orientation</p>  
+                          </li> 
+                </figure>
+            </div>
+            
+            
+        </div>
+                  
 </section>
 
     <section class="contact-our-area section-padding-100-0" id=contact data-section="contact">
@@ -665,31 +723,27 @@ if (!sessionStorage.isVisited) {
             
         }
     </script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-          effect: 'coverflow',
-          grabCursor: true,
-          centeredSlides: true,
-          slidesPerView: 'auto',
-          coverflowEffect: {
-            rotate: 30,
-            stretch: 0,
-            depth: 200,
-            modifier: 1,
-            slideShadows: true,
-          },
-          loop: true,
-          autoplay: {
-                delay: 2000,
-                disableOnInteraction: false,
-            },
-          pagination: {
-            el: '.swiper-pagination',
-          },
-        });
-      </script>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script type="text/javascript">
+        $('.owl-carousel').owlCarousel({
+    loop:false,
+    margin:10,
+    nav:false,
+    stagePadding: 30,
+    responsive:{
+        0:{
+            items:2
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:4
+        }
+    }
+})
+    </script>
     <script src="js/events/validation.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
