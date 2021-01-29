@@ -119,85 +119,19 @@
                                         </div>
                                         <p>Sahiti’s first Instagram live session with most versatile actor of Telugu industry : Sree Vishnu, to enlighten us on the art of acting.</p>
                                     </div>                  
-            <br>          
-            <div class="container">
-                
-                <div class="feature">
-                    <figure class="featured-item image-holder r-3-2 transition"></figure>
-                </div>
-                
-                <div class="gallery-wrapper">
-                    <div class="gallery">
-                            <div class="item-wrapper">
-                                <figure class="gallery-item image-holder r-3-2 active transition"></figure>
-                            </div>
-                            <div class="item-wrapper">
-                                <figure class="gallery-item image-holder r-3-2 transition"></figure>
-                            </div>
-                            <div class="item-wrapper">
-                                <figure class="gallery-item image-holder r-3-2 transition"></figure>
-                            </div>
-                            <div class="item-wrapper">
-                                <figure class="gallery-item image-holder r-3-2 transition"></figure>
-                            </div>
-                            <div class="item-wrapper">
-                                <figure class="gallery-item image-holder r-3-2"></figure>
-                            </div>
-                    </div>
-                </div>
-                
-                <div class="controls">
-                    <button class="move-btnn left">&larr;</button>
-                    <button class="move-btnn right">&rarr;</button>
-                </div>
-                <h4 style="padding-top: 2rem; text-align: center;">Get A Reminder ?</h4>
-                <div style="padding-top: 2rem;">
-                    <h6>Give Us your Name, Phone Number And E-mail and we will make sure to remind you.</h6>
-                    <div class="contact_form">
-                        <form name=myform action="https://formspree.io/sahititla.vit@gmail.com"  method="POST">
-                            <div class="contact_input_area">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control mb-30" name="name" autocomplete="off"  placeholder="Your Name" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 ">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control mb-30" name="Phone" autocomplete="off"  placeholder="Mobile Number (WhatsApp)" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 ">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control mb-30" name="email" autocomplete="off"  placeholder="E-mail" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 ">
-                                        <div class="form-group">
-                                            <input type="hidden" class="form-control mb-30" name="subject" autocomplete="off"  placeholder="Subject" style="height: auto;" required disabled value="Set Reminder on 26th Feb, 2021">
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <textarea name="message" style="display: none;" class="form-control mb-30"  cols="30" rows="2" autocomplete="off" required disabled >Hey There! I Am Interested And Want To Be Reminded For Your Event. Thank You.</textarea>   
-                                        </div>
-                                    </div>
-                                    <div class="col-12" style="text-align: center;">
-                                        <button type="submit" name="submit" class="btn confer-btn">Remind Me :) </button>
-                                    </div>
-                                    
+                                    <br>          
                                     <div>
-                                        <input type="hidden" id="details" name="details" value="value">
+                                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfdbweKD4ItlhXSCmZmBqnhW2F8n6HIhs3Yau1zyTYMysTJ_w/viewform?embedded=true" 
+                                        width="440" height="1100" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                                        <div style="text-align: end;">
+                                            <button type="submit" name="done" class="btn confer-btn btn-small" onclick="show()">Aipoyindha ?</button>
+                                        </div>
+                                        <div id="showdetails" style="display: none;">
+                                            <p>Sare elago form fill chesesavu, mari ippudu kaalinega..? Elago Kaaline Kaabati Maa website motham okka round veyaraadha... <a href="home.html">Home</a></p>
+                                            <p>Sare poni events varaku aina chudu <a href="events.html">Events</a></p>
+                                            <p>Adhi kuda chudalani ledha sare Sahiti Skit Team chesina Podcast vundhi vintava mari? <a href="https://www.instagram.com/tv/CDOcDTbBQ7s/">Dooranga Dhagaraga EP-01</a></p>
+                                        </div>
                                     </div>
-
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                
-    
-            </div>
                      
                                 </div>
                             </div>              
@@ -217,6 +151,16 @@
       var scrolled = (winScroll / height) * 100;
       document.getElementById("myBar").style.width = scrolled + "%";
     }
+    </script>
+    <script>
+        function show() {
+  var x = document.getElementById("showdetails");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
     </script>
     <script src="js/events/vishnu.js"></script>
     <!-- <script src="js/jquery.min.js"></script> -->
