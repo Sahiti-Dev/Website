@@ -38,6 +38,8 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171588218-1"></script>
 <script>
@@ -89,6 +91,11 @@
 </div>
 
     <header class="header-area">
+        <div class="progress1">
+            <div class="progress-container">
+              <div class="progress-bar" id="myBar"></div>
+            </div>  
+        </div>
         <div class="classy-nav-container breakpoint-off">
             <div class="container">
                 <nav class="classy-navbar justify-content-between" id="conferNav">
@@ -449,7 +456,7 @@
         </div>
     </div>
     
-        <div class="gallery-utube">
+        <!-- <div class="gallery-utube">
             <div class="single-video">
                 <figure>
                   <li class="uvideo">
@@ -501,6 +508,74 @@
                       <p class="utube-text">2017 Freshers orientation</p>  
                       </li> 
             </figure>
+            </div>
+          </div> -->
+          <div class="yt-vedios">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide wow fadeInLeft" data-wow-delay="300ms">
+                    <div class="card" style="background-color: transparent;">
+                        <a href="https://youtu.be/Ana_kgzNJZo" target="_blank">
+                        <img class="card-img-top"  src="Photos/utube/1.jpg" alt="After Movie 2K20">
+                        <div class="card-body">
+                            <p class="utube-text card-text" >After Movie 2K20</p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide wow fadeInLeft" data-wow-delay="500ms">
+                    <div class="card" style="background-color: transparent;">
+                        <a href="https://youtu.be/Gk7TK6Uk0dw" target="_blank">
+                        <img class="card-img-top"  src="Photos/utube/111.jpg" alt="Single Pasanga X Hoyna Hoyna">
+                        <div class="card-body">
+                            <p class="utube-text card-text">Single Pasanga X Hoyna Hoyna</p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide wow fadeInLeft" data-wow-delay="700ms">
+                    <div class="card" style="background-color: transparent;">
+                        <a href="https://youtu.be/LnMLuAGau1U" target="_blank">
+                        <img class="card-img-top"  src="Photos/utube/5.jpg" alt="Kamini Song Telugu Version">
+                        <div class="card-body">
+                            <p class="utube-text card-text">Kamini Song Telugu Version</p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide wow fadeInLeft" data-wow-delay="900ms">
+                    <div class="card" style="background-color: transparent;">
+                        <a href="https://youtu.be/MXP7dG3henc" target="_blank">
+                        <img class="card-img-top"  src="Photos/utube/4.png" alt="Sahiti Dance Video">
+                        <div class="card-body">
+                            <p class="utube-text card-text">Sahiti Dance Video</p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card" style="background-color: transparent;">
+                        <a href="https://youtu.be/twoZl-HLiiU" target="_blank">
+                        <img class="card-img-top"  src="Photos/utube/2.jpg" alt="2018 Freshers orientation">
+                        <div class="card-body">
+                            <p class="utube-text card-text">2018 Freshers orientation</p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card" style="background-color: transparent;">
+                        <a href="https://youtu.be/i-VBMMISFa0" target="_blank">
+                        <img class="card-img-top"  src="Photos/utube/3.jpg" alt="2017 Freshers orientation">
+                        <div class="card-body">
+                            <p class="utube-text card-text">2017 Freshers orientation</p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination wow fadeInRight" data-wow-delay="1100ms"></div>
             </div>
           </div>
 </section>
@@ -621,6 +696,68 @@ if (!sessionStorage.isVisited) {
 
 </script>
 
+<script>
+    // When the user scrolls the page, execute myFunction 
+    window.onscroll = function() {myFunction()};
+    
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+</script>
+<script>
+    document.querySelector('body').addEventListener('mousemove',eyeball);
+    function eyeball() {
+        var eye = document.querySelectorAll('.eye');
+        eye.forEach(function (eye) {
+            let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2)
+            let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2)
+            let radian = Math.atan2(event.pageX - x, event.pageY - y)
+            let rot = (radian * (180 / Math.PI) * -1) + 270;
+            eye.style.transform = "rotate("+ rot + "deg)";
+        })
+        
+    }
+</script>
+
+
+    <!-- Swiper JS for YT vedios carousal-->
+ 
+<script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+<script>
+  
+  var swiper = new Swiper('.swiper-container', {
+  //   slidesPerView: 4,
+      spaceBetween: 10,
+      slidesPerGroup: 2,
+      pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      100: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      640: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 25,
+      },
+    }
+  });
+</script>
    <script src="js/events/validation.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
