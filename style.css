@@ -2540,3 +2540,8 @@ height: 40px;
   top: 0px;
   left: 0px;
 }
+
+.extra-card{
+  border: none;
+  background-color: #15239C;
+}
