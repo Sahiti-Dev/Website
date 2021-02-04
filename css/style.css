@@ -22,6 +22,88 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+/*swiper js for yt-vedios carousel*/
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+  }
+  .swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	/* background: #fff; */
+	
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+  }
+  /* :root {
+	   -swiper-theme-color: #fff;
+  } */
+  .yt-vedios img{
+	  
+	  height: auto;
+	  width: 100%;
+	  
+  }
+  .swiper-wrapper {
+	padding: 20px 0;
+	  
+	  
+  }
+  .swiper-slide {
+	transform: 250ms all;
+	  margin-right: 2px;
+	
+  }
+  .swiper-slide:hover {
+	  transform: scale(1.2);
+	  z-index: 1;
+	  cursor: pointer;
+	}
+  .swiper-pagination-bullet {
+	  background-color: #fff !important;
+  }
+  .swiper-pagination {
+	  position: static !important; 
+	  
+  }
+  
+  .card {
+	  border: none;
+  }
+	  
+  
+  /*Scroll indicator*/
+  .progress1 {
+	  position: fixed;
+	  top: 70px;
+	  z-index: 1;
+	  width: 100%;
+	  
+  }
+  .progress-container {
+	  width: 100%;
+	  height: 4px;
+	  
+  }
+	
+  .progress-bar {
+	  height: 4px;
+	  background: #df42b1;
+	  width: 0%;
+  }
+
 /* Use the following CSS code if you want to have a class per icon */
 /*
 Instead of a list of all class selectors,
