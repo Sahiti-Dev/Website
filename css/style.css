@@ -86,11 +86,11 @@ you can use the generic selector below, but it's slower:
 	
 }
 
-.card {
-	height: 250px; 
+/* .card {
+	height: 250px ; 
 	background-color: transparent;
 	
-}
+} */
  
 
 	
