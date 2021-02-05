@@ -29,7 +29,7 @@ you can use the generic selector below, but it's slower:
 [class*="your-class-prefix"] {
 */
 
-/*swiper js */
+/*swiper js for yt-vedios carousel*/
 
 .swiper-container {
   width: 100%;
@@ -65,7 +65,7 @@ you can use the generic selector below, but it's slower:
 }
 .swiper-wrapper {
   padding: 20px 0;
-	
+	margin-bottom: 10px;
 	
 }
 .swiper-slide {
