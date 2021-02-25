@@ -32,13 +32,15 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="description" content="Sahiti | Telugu Literary Association of VIT Vellore">
 	<meta name="twitter:site" content="">
-
+    <script src="https://cdn.logwork.com/widget/countdown.js"></script>
     <link rel="stylesheet" href="style.css?version=3">
     <link rel="stylesheet" href="css/events.css">
     <link rel="stylesheet" href="css/style.css">
 
        <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171588218-1"></script>
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -102,9 +104,8 @@
             </div>
         </div>
     </section>
-
     
-                <section class="confer-blog-details-area section-padding-100-0">
+      <section class="confer-blog-details-area section-padding-100-0">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-12 col-lg-8 col-xl-9">
@@ -119,18 +120,70 @@
                                         </div>
                                         <p>Sahiti’s first Instagram live session with most versatile actor of Telugu industry : Sree Vishnu, to enlighten us on the art of acting.</p>
                                     </div>                  
-                                    <br>          
+                                    <br>  
+
+                                    <!-- https://codepen.io/al_somz7/pen/KKVaGYw -->
+                                    <div class="countdown-wrapper">
+                                        <h1>EVENT STARTING IN</h1>
+                                        <p>April 25th, 2021 at 2:30am IST</p>
+                                        <div id="countdown" class="wow fadeInUp" data-wow-delay="300ms">
+                                        </div>
+                                      </div>
+                                    
+                                    
+                                    <h4 style="padding-top: 2rem; text-align: center; text-decoration: underline;" class="wow fadeInLeft" data-wow-delay="300ms">Get A Reminder</h4>
+                                    <div style="padding-top: 2rem;">
+                                    <h6 class="wow fadeInRight" style="text-align: center;"data-wow-delay="300ms">Give Us your Name, Phone Number And E-mail Address and we will make sure to remind you.</h6>
+                                    <div class="contact_form wow fadeInUp" data-wow-delay="300ms" style="margin-top: 1.5rem;">
+                        <form name=myform action="https://formspree.io/sahititla.vit@gmail.com"  method="POST">
+                            <div class="contact_input_area">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control mb-30" name="name" autocomplete="off"  placeholder="Your Name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 ">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control mb-30" name="Phone" autocomplete="off"  placeholder="Mobile Number (WhatsApp)" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 ">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control mb-30" name="email" autocomplete="off"  placeholder="E-mail" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 ">
+                                        <div class="form-group">
+                                            <input type="hidden" class="form-control mb-30" name="subject" autocomplete="off"  placeholder="Subject" style="height: auto;" required disabled value="Set Reminder on 26th Feb, 2021">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <textarea name="message"  class="form-control mb-30"  cols="30" rows="2" autocomplete="off" required>Hey There! I Am Interested And Want To Be Reminded For Your Event Mathrubasha at 2 30 am. Thank You.</textarea>   
+                                        </div>
+                                    </div>
+                                    <div class="col-12" style="text-align: center;" >
+                                        <button type="submit" name="submit" class="btn confer-btn">Remind Me :) </button>
+                                    </div>
+                                    
                                     <div>
+                                        <input type="hidden" id="details" name="details" value="value">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </form>
+                                    </div>
+                                    <div style="padding-top: 2rem;">
                                         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfdbweKD4ItlhXSCmZmBqnhW2F8n6HIhs3Yau1zyTYMysTJ_w/viewform?embedded=true" 
-                                        width="440" height="1100" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-                                        <div style="text-align: end;">
-                                            <button type="submit" name="done" class="btn confer-btn" onclick="show()">Aipoyindha ?</button>
-                                        </div>
-                                        <div id="showdetails" style="display: none;">
-                                            <p>Sare elago form fill chesesavu, mari ippudu kaalinega..? Elago Kaaline Kaabati Maa website motham okka round veyaraadha... <a href="home.html">Home</a></p>
-                                            <p>Sare poni events varaku aina chudu <a href="events.html">Events</a></p>
-                                            <p>Adhi kuda chudalani ledha sare Sahiti Skit Team chesina Podcast vundhi vintava mari? <a href="https://www.instagram.com/tv/CDOcDTbBQ7s/">Dooranga Dhagaraga EP-01</a></p>
-                                        </div>
+                                        width="440" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                                    </div>
+                </div>
+                                            
+                                        
+                                        
+                                        
                                     </div>
                      
                                 </div>
@@ -138,9 +191,127 @@
                         </div>
                     </div>
                 </section>
+                <section class="container-fluid our-sponsor-client-area bg-img bg-gradient-overlay section-padding-100">
+                    
+                    <div class="col-12">
+                        <div class="section-heading-2 wow fadeInUp" data-wow-delay="300ms">
+                            <h4 class="utube-text card-text">Recommended Sahiti Videos</h4>
+                        </div>
+                    </div>
+                    
+                        <div class="yt-vedios">
+                            <div class="swiper-container">
+                              <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="card" style="background-color: transparent;">
+                                        <a href="https://youtu.be/Ana_kgzNJZo" target="_blank">
+                                        <img class="card-img-top"  src="Photos/utube/1.jpg" alt="After Movie 2K20">
+                                        <div class="card-body">
+                                            <p class="utube-text card-text" >After Movie 2K20</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card" style="background-color: transparent;">
+                                        <a href="https://youtu.be/Gk7TK6Uk0dw" target="_blank">
+                                        <img class="card-img-top"  src="Photos/utube/111.jpg" alt="Single Pasanga X Hoyna Hoyna">
+                                        <div class="card-body">
+                                            <p class="utube-text card-text">Single Pasanga X Hoyna Hoyna</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card" style="background-color: transparent;">
+                                        <a href="https://youtu.be/LnMLuAGau1U" target="_blank">
+                                        <img class="card-img-top"  src="Photos/utube/5.jpg" alt="Kamini Song Telugu Version">
+                                        <div class="card-body">
+                                            <p class="utube-text card-text">Kamini Song Telugu Version</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card" style="background-color: transparent;">
+                                        <a href="https://youtu.be/MXP7dG3henc" target="_blank">
+                                        <img class="card-img-top"  src="Photos/utube/4.png" alt="Sahiti Dance Video">
+                                        <div class="card-body">
+                                            <p class="utube-text card-text">Sahiti Dance Video</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card" style="background-color: transparent;">
+                                        <a href="https://youtu.be/twoZl-HLiiU" target="_blank">
+                                        <img class="card-img-top"  src="Photos/utube/2.jpg" alt="2018 Freshers orientation">
+                                        <div class="card-body">
+                                            <p class="utube-text card-text">2018 Freshers orientation</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card" style="background-color: transparent;">
+                                        <a href="https://youtu.be/i-VBMMISFa0" target="_blank">
+                                        <img class="card-img-top"  src="Photos/utube/3.jpg" alt="2017 Freshers orientation">
+                                        <div class="card-body">
+                                            <p class="utube-text card-text">2017 Freshers orientation</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                              <!-- Add Pagination -->
+                              <div class="swiper-pagination wow fadeInRight" data-wow-delay="1100ms"></div>
+                                </div>
+                          </div>
+                </section>
             </div>
 
     <div id="footer"></div>
+       <!-- Swiper JS for YT vedios carousal-->
+ 
+<script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+
+var swiper = new Swiper('.swiper-container', {
+//   slidesPerView: 4,
+    spaceBetween: 10,
+    slidesPerGroup: 2,
+    loop:true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    100: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 10,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 25,
+    },
+  }
+});
+</script>
+
     <script>
     // When the user scrolls the page, execute myFunction 
     window.onscroll = function() {myFunction()};
@@ -162,6 +333,7 @@
   }
 }
     </script>
+    <script src="js/countdown.js"></script>
     <script src="js/events/vishnu.js"></script>
     <!-- <script src="js/jquery.min.js"></script> -->
     <script src="js/popper.min.js"></script>

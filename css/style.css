@@ -65,7 +65,7 @@ you can use the generic selector below, but it's slower:
 }
 .swiper-wrapper {
   padding: 20px 0;
-	margin-bottom: 10px;
+
 	
 }
 .swiper-slide {
@@ -89,12 +89,70 @@ you can use the generic selector below, but it's slower:
 .card {
 	border: none;
 }
-	
+
+/*countdowntime*/
+:root {
+	--color-grey-dark: #323031;
+	--color-grey-light: #ddd;
+	--color-primary: #0D5C63;
+  }
+  
+  
+  
+  
+  .countdown-wrapper {
+	padding: 2rem 0;
+	text-align: center;
+	width: 100%;
+	color: var(--color-grey-dark);
+  }
+  #countdown {
+	font-size: 2rem;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around; /* IE 11 */
+	width: 85%;
+	max-width: 67.5rem;
+	margin: auto;
+  }
+  @supports (justify-content: space-evenly) { /* !== IE 11 */
+	#countdown {
+	  justify-content: space-evenly;
+	}
+  }
+  #countdown > p {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 1rem;
+  }
+  #days, #hours, #minutes, #seconds {
+	font-size: 4rem;
+  }
+  #days-text, #hours-text, #minutes-text, #seconds-text {
+	margin-top: -.5rem;
+	color: var(--color-primary);
+	text-transform: uppercase;
+  }
+  
+  /* Media Queries */
+  @media only screen and (max-width: 64em) { /* 1024px */
+	#countdown {
+	  width: 100%;
+	  font-size: 1.5rem;
+	}
+  }
+ /*  @media only screen and (max-width: 43.75em) { 700px 
+	#countdown p {
+	  flex: 0 0 0%;
+	}
+  }*/
 
 /*Scroll indicator*/
 .progress1 {
 	position: fixed;
-	top: 70px;
+	top: 70.8px;
 	z-index: 1;
 	width: 100%;
 	
