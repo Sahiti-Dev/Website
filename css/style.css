@@ -88,8 +88,11 @@ you can use the generic selector below, but it's slower:
 
 .card {
 	border: none;
+	background-color: transparent;
 }
-
+.card-img-top {
+	border-radius: 10px;
+}
 /*countdowntime*/
 :root {
 	--color-grey-dark: #323031;
