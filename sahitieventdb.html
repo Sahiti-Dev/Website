@@ -125,57 +125,64 @@
                                     <!-- https://codepen.io/al_somz7/pen/KKVaGYw -->
                                     <div class="countdown-wrapper">
                                         <h2>EVENT STARTING IN</h2>
-                                        <div id="countdown" class="wow fadeInUp" data-wow-delay="300ms">
+                                        <div id="countdown" class="wow fadeInLeft" data-wow-delay="300ms">
                                         </div>
                                         <p>April 25th, 2021 at 2:30am IST</p>
                                       </div>
                                     
                                     
-                                    <h4 style="padding-top: 2rem; text-align: center; text-decoration: underline;" class="wow fadeInLeft" data-wow-delay="300ms">Set A Reminder</h4>
-                                    <div style="padding-top: 2rem;">
-                                    <h6 class="wow fadeInRight" style="text-align: center;"data-wow-delay="300ms">Give Us your Name, Phone Number And E-mail Address and we will make sure to remind you.</h6>
-                                    <div class="contact_form wow fadeInUp" data-wow-delay="300ms" style="margin-top: 1.5rem;">
-                        <form name=myform action="https://formspree.io/sahititla.vit@gmail.com"  method="POST">
-                            <div class="contact_input_area">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control mb-30" name="name" autocomplete="off"  placeholder="Your Name" required>
-                                        </div>
+                                    <!-- <h4 style="padding-top: 2rem; text-align: center; text-decoration: underline;" class="wow fadeInLeft" data-wow-delay="300ms">Set A Reminder</h4> -->
+                                    <div style="text-align: center;">
+                                        <button class="btn confer-btn wow fadeInRight" data-wow-delay="300ms" onclick="remind()">Set A Reminder?</button>
                                     </div>
-                                    <div class="col-12 ">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control mb-30" name="Phone" autocomplete="off"  placeholder="Mobile Number (WhatsApp)" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 ">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control mb-30" name="email" autocomplete="off"  placeholder="E-mail" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 ">
-                                        <div class="form-group">
-                                            <input type="hidden" class="form-control mb-30" name="subject" autocomplete="off"  placeholder="Subject" style="height: auto;" required disabled value="Set Reminder on 26th Feb, 2021">
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <textarea name="message"  class="form-control mb-30"  cols="30" rows="3" autocomplete="off" style="height: auto;" required>Your Message: Hey There! I Am Interested In Your Event Mathrubasha Do Remind Me at 2:30 am.</textarea>   
-                                        </div>
-                                    </div>
-                                    <div class="col-12" style="text-align: center;" >
-                                        <button type="submit" name="submit" class="btn confer-btn">Remind Me :) </button>
-                                    </div>
-                                    
-                                    <div>
-                                        <input type="hidden" id="details" name="details" value="value">
-                                    </div>
+                                    <br>
+                                    <div id="hide" style="display: none;">
+                                        <br>
+                                        <h6 style="text-align: center;">Give Us your Name, Phone Number And E-mail Address and we will make sure to remind you.</h6>
+                                        <br>
+                                        <div class="contact_form">
+                                        <form name=myform action="https://formspree.io/sahititla.vit@gmail.com"  method="POST">
+                                            <div class="contact_input_area">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control mb-30" name="name" autocomplete="off"  placeholder="Your Name" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 ">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control mb-30" name="Phone" autocomplete="off"  placeholder="Mobile Number (WhatsApp)" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 ">
+                                                        <div class="form-group">
+                                                            <input type="email" class="form-control mb-30" name="email" autocomplete="off"  placeholder="E-mail" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 ">
+                                                        <div class="form-group">
+                                                            <input type="hidden" class="form-control mb-30" name="subject" autocomplete="off"  placeholder="Subject" style="height: auto;" required disabled value="Set Reminder on 26th Feb, 2021">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <textarea name="message"  class="form-control mb-30"  cols="30" rows="3" autocomplete="off" style="height: auto;" required>Your Message: Hey There! I Am Interested In Your Event Mathrubasha Do Remind Me at 2:30 am.</textarea>   
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12" style="text-align: center;" >
+                                                        <button type="submit" name="submit" class="btn confer-btn">Remind Me :) </button>
+                                                    </div>
 
-                                </div>
-                            </div>
-                        </form>
+                                                    <div>
+                                                        <input type="hidden" id="details" name="details" value="value">
+                                                    </div>
+                                                
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
-                                    <div style="padding-top: 2rem;">
+                                    </div>
+                                    <br>
                                         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfdbweKD4ItlhXSCmZmBqnhW2F8n6HIhs3Yau1zyTYMysTJ_w/viewform?embedded=true" 
                                         width="360" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                                     </div>
@@ -201,30 +208,30 @@
                     <div class="yt-vedios">
                         <div class="swiper-container swiper1">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
+                                <div class="swiper-slide wow fadeInUp" data-wow-delay="500ms">
                                     <div class="card">
                                         <a href="https://www.instagram.com/tv/CDOcDTbBQ7s/" target="_blank">
-                                        <img class="card-img-top"  src="Photos/DD/dd1.jpg" alt="After Movie 2K20">
+                                        <img class="card-img-top top1"  src="Photos/DD/dd1.jpg" alt="After Movie 2K20">
                                         <div class="card-body">
                                             <p class="utube-text card-text" >Dhooranga Dhagaraga EPISODE 1</p>
                                         </div>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="swiper-slide wow fadeInUp" data-wow-delay="700ms">
                                     <div class="card">
                                         <a href="https://www.instagram.com/tv/CDjE-yyharl/" target="_blank">
-                                        <img class="card-img-top"  src="Photos/DD/dd2.jpg" alt="After Movie 2K20">
+                                        <img class="card-img-top top1"  src="Photos/DD/dd2.jpg" alt="After Movie 2K20">
                                         <div class="card-body">
                                             <p class="utube-text card-text" >Dhooranga Dhagaraga EPISODE 2</p>
                                         </div>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="swiper-slide wow fadeInUp" data-wow-delay="900ms">
                                     <div class="card">
                                         <a href="https://www.instagram.com/tv/CE4LNZLhG4z/" target="_blank">
-                                        <img class="card-img-top"  src="Photos/DD/dd3.jpg" alt="After Movie 2K20">
+                                        <img class="card-img-top top1"  src="Photos/DD/dd3.jpg" alt="After Movie 2K20">
                                         <div class="card-body">
                                             <p class="utube-text card-text" >Dhooranga Dhagaraga EPISODE 3</p>
                                         </div>
@@ -240,7 +247,7 @@
                     <br>
                     <br>
                     <div class="col-12">
-                        <div class="section-heading-2 wow fadeInUp" data-wow-delay="300ms">
+                        <div class="section-heading-2 wow fadeInUp" data-wow-delay="1300ms">
                             <h4 class="utube-text card-text">Recommended Sahiti Videos</h4>
                         </div>
                     </div>
@@ -250,7 +257,7 @@
                                 <div class="swiper-slide">
                                     <div class="card">
                                         <a href="https://youtu.be/Ana_kgzNJZo" target="_blank">
-                                        <img class="card-img-top"  src="Photos/utube/1.jpg" alt="After Movie 2K20">
+                                        <img class="card-img-top top2"  src="Photos/utube/1.jpg" alt="After Movie 2K20">
                                         <div class="card-body">
                                             <p class="utube-text card-text" >After Movie 2K20</p>
                                         </div>
@@ -260,7 +267,7 @@
                                 <div class="swiper-slide">
                                     <div class="card">
                                         <a href="https://youtu.be/Gk7TK6Uk0dw" target="_blank">
-                                        <img class="card-img-top"  src="Photos/utube/111.jpg" alt="Single Pasanga X Hoyna Hoyna">
+                                        <img class="card-img-top top2"  src="Photos/utube/111.jpg" alt="Single Pasanga X Hoyna Hoyna">
                                         <div class="card-body">
                                             <p class="utube-text card-text">Single Pasanga X Hoyna Hoyna</p>
                                         </div>
@@ -270,7 +277,7 @@
                                 <div class="swiper-slide">
                                     <div class="card">
                                         <a href="https://youtu.be/LnMLuAGau1U" target="_blank">
-                                        <img class="card-img-top"  src="Photos/utube/5.jpg" alt="Kamini Song Telugu Version">
+                                        <img class="card-img-top top2"  src="Photos/utube/5.jpg" alt="Kamini Song Telugu Version">
                                         <div class="card-body">
                                             <p class="utube-text card-text">Kamini Song Telugu Version</p>
                                         </div>
@@ -280,7 +287,7 @@
                                 <div class="swiper-slide">
                                     <div class="card">
                                         <a href="https://youtu.be/MXP7dG3henc" target="_blank">
-                                        <img class="card-img-top"  src="Photos/utube/4.png" alt="Sahiti Dance Video">
+                                        <img class="card-img-top top2"  src="Photos/utube/4.png" alt="Sahiti Dance Video">
                                         <div class="card-body">
                                             <p class="utube-text card-text">Sahiti Dance Video</p>
                                         </div>
@@ -290,7 +297,7 @@
                                 <div class="swiper-slide">
                                     <div class="card">
                                         <a href="https://youtu.be/twoZl-HLiiU" target="_blank">
-                                        <img class="card-img-top"  src="Photos/utube/2.jpg" alt="2018 Freshers orientation">
+                                        <img class="card-img-top top2"  src="Photos/utube/2.jpg" alt="2018 Freshers orientation">
                                         <div class="card-body">
                                             <p class="utube-text card-text">2018 Freshers orientation</p>
                                         </div>
@@ -300,7 +307,7 @@
                                 <div class="swiper-slide">
                                     <div class="card">
                                         <a href="https://youtu.be/i-VBMMISFa0" target="_blank">
-                                        <img class="card-img-top"  src="Photos/utube/3.jpg" alt="2017 Freshers orientation">
+                                        <img class="card-img-top top2"  src="Photos/utube/3.jpg" alt="2017 Freshers orientation">
                                         <div class="card-body">
                                             <p class="utube-text card-text">2017 Freshers orientation</p>
                                         </div>
@@ -319,7 +326,16 @@
        <!-- Swiper JS for YT vedios carousal-->
  
 <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
-
+<script>
+    function remind() {
+      var x = document.getElementById("hide");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    </script>
 <!-- Initialize Swiper -->
 <script>
 
