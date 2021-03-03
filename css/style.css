@@ -61,19 +61,28 @@ you can use the generic selector below, but it's slower:
     
     height: auto;
     width: 100%;
-    
 }
-.swiper-wrapper {
-  padding: 20px 0;
+/* .swiper1 .swiper-wrapper {
+  padding: 10.7vh 0;
+} */
 
-	
+.swiper2 .swiper-wrapper {
+	padding: 3.5vh 0;
+  }
+.swiper1 .swiper-slide {
+  /* transform: 250ms all; */
+	margin-right: 2px;
 }
-.swiper-slide {
+.swiper2 .swiper-slide {
   transform: 250ms all;
 	margin-right: 2px;
-  
 }
-.swiper-slide:hover {
+.swiper1 .swiper-slide:hover {
+    /* transform: scale(1.2);
+	z-index: 1; */
+	cursor: pointer;
+  }
+  .swiper2 .swiper-slide:hover {
     transform: scale(1.2);
 	z-index: 1;
 	cursor: pointer;
@@ -90,14 +99,22 @@ you can use the generic selector below, but it's slower:
 	border: none;
 	background-color: transparent;
 }
-.card-img-top {
+
+.top1 {
+	border-radius: 20px 0 20px 0px;
+	border: 4px solid white;
+}
+
+
+.top2 {
 	border-radius: 10px;
+	border: 4px solid white;
 }
 /*countdowntime*/
 :root {
 	--color-grey-dark: #323031;
 	--color-grey-light: #ddd;
-	--color-primary: #0D5C63;
+	--color-primary: #000;
   }
   
   
