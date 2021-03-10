@@ -107,6 +107,35 @@
         });
     }
 
+    if ($.fn.owlCarousel) {
+        var clientArea = $('.event-area');
+        clientArea.owlCarousel({
+            items: 3,
+            loop: true,
+            autoplay: true,
+            smartSpeed: 1000,
+            margin: 40,
+            autoplayTimeout: 3000,
+            nav: false,
+            navText: [('<i class="zmdi zmdi-chevron-left"></i>'), ('<i class="zmdi zmdi-chevron-right"></i>')],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                576: {
+                    items: 2,
+                    margin: 15
+                },
+                992: {
+                    margin: 20
+                },
+                1200: {
+                    margin: 40
+                }
+            }
+        });
+    }
+
     // *********************************
     // :: 5.0 Masonary Gallery Active Code
     // *********************************
