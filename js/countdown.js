@@ -3,7 +3,7 @@
 // If you want time zones taken into account, get rid of Date.UTC and TimezoneOffset
 
 // (Year, Month, Day, Hour (offset by + 7 for IST), Min, Sec)
-const end = new Date(Date.UTC(2021, 3, 25, 09, 15, 0));
+const end = new Date(Date.UTC(2021, 2, 28, 09, 15, 0));
 // Change only this for new end dates (zero-indexed and military time). Current: UTC June 21 2021, 7am (12am AZ time)
 
 const second = 1000;
