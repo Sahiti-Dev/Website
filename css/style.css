@@ -57,10 +57,14 @@ you can use the generic selector below, but it's slower:
 /* :root {
  	-swiper-theme-color: #fff;
 } */
-.yt-vedios img{
+.second img{
     
     height: auto;
     width: 100%;
+}
+.first img{
+	height: 400px;
+    width: 200px;
 }
 /* .swiper1 .swiper-wrapper {
   padding: 10.7vh 0;
@@ -94,15 +98,128 @@ you can use the generic selector below, but it's slower:
 	position: static !important; 
 	
 }
+.wrapper{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	text-align:center;
+  }
+  
+  /* DEMO-SPECIFIC STYLES */
+   #title {
+	color: palevioletred;
+	font-family: monospace;
+	border-right: .15em solid #fff; 
+	white-space: nowrap; 
+	margin-top: 40px;
+	padding-right:00px;
+	letter-spacing: .15em;
+	animation: blink .5s step-end           infinite alternate;
+	text-transform: uppercase;
+  }
+  
+  
+  
+  /* The typewriter cursor effect */
+  @keyframes blink {
+	50% { border-color: black}
+  }
+#neon{
+    position: relative;
+    top: 50%;  width: 100%;   text-align: center;
+    transform: translate(0,-50%); 
+  white-space: nowrap;
+}
+#neon li{
+    list-style: none;
+    display: inline-block;
+    width: 2rem;  height: 2rem;   line-height: 2rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    animation: animate 5s infinite linear;   
+}
+@keyframes animate{
+    0%{
+        border: 2px solid #f00;
+        color: #f00;
+        box-shadow: 0 15px 50px #f00;
+    }
+    20%{
+        border: 2px solid #00b894;
+        color: #00b894;
+        box-shadow: 0 15px 50px #00b894;
+    }
+    40%{
+        border: 2px solid #0984e3;
+        color: #0984e3;
+        box-shadow: 0 15px 50px #0984e3;
+    }
+    60%{
+        border: 2px solid #6c5ce7;
+        color: #6c5ce7;
+        box-shadow: 0 15px 50px #6c5ce7;
+    }
+    80%{
+        border: 2px solid #e17055;
+        color: #e17055;
+        box-shadow: 0 15px 50px #e17055;
+    }
+    100%{
+        border: 2px solid #e84393;
+        color: #e84393;
+        box-shadow: 0 15px 50px #e84393;
+    }
+}
+ul li:nth-of-type(1){
+    animation-delay: 0s;
+}
+ul li:nth-of-type(2){
+    animation-delay: .2s;
+}
+ul li:nth-of-type(3){
+    animation-delay: .4s;
+}
+ul li:nth-of-type(4){
+    animation-delay: .6s;
+}
+ul li:nth-of-type(5){
+    animation-delay: .8s;
+}
+ul li:nth-of-type(6){
+    animation-delay: 1s;
+}
+ul li:nth-of-type(7){
+    animation-delay: 1.2s;
+}
+ul li:nth-of-type(8){
+    animation-delay: 1.4s;
+}
+ul li:nth-of-type(9){
+    animation-delay: 1.6s;
+}
+ul li:nth-of-type(10){
+    animation-delay: 1.8s;
+}
+ul li:nth-of-type(11){
+    animation-delay: 2.0s;
+}
 
-.card {
+.card1 {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.card1:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+.card2 {
 	border: none;
 	background-color: transparent;
 }
 
 .top1 {
 	border-radius: 20px 0 20px 0px;
-	border: 4px solid white;
+	border: 3.5px solid white;
 }
 
 
