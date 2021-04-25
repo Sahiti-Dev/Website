@@ -29,6 +29,40 @@ you can use the generic selector below, but it's slower:
 [class*="your-class-prefix"] {
 */
 
+.breadcrumb {
+    background-color: transparent;
+	padding-left: 0;
+}
+#newb{
+	-webkit-text-fill-color: transparent;
+	font-size: small;	  
+}
+#newb::before {
+	content: "";
+	position: absolute;
+	-webkit-text-fill-color: #df42b1;
+	transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+	animation: newb 2s 2s ease-in-out alternate infinite;
+}
+@keyframes newb {
+	0% {
+	content: "";
+	}
+	25% {
+	content: "N";
+	}
+	50% {
+	content: "Ne";
+	}
+	75% {
+	content: "New";
+	}
+	100% {
+	content: "New!";
+	}
+}
+	  
+
 /*swiper js for yt-vedios carousel*/
 
 .swiper-container {
@@ -108,7 +142,7 @@ you can use the generic selector below, but it's slower:
   /* DEMO-SPECIFIC STYLES */
    #title {
 	color: palevioletred;
-	font-family: monospace;
+	/* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
 	border-right: .15em solid #fff; 
 	white-space: nowrap; 
 	margin-top: 40px;
@@ -118,7 +152,170 @@ you can use the generic selector below, but it's slower:
 	text-transform: uppercase;
   }
   
-  
+/*audio for blogs*/
+
+#audio-box {
+	background-color: #2e3033;
+	color: #fff;
+	position: relative;
+	width: 100% !important;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 1em 0.5em 0em 0.5em!important;
+	z-index: 5;
+}
+#controls-wrapper {
+	text-align: justify;
+	user-select: none;
+}
+#rw,
+#ff,
+#play {
+	cursor: pointer;
+	user-select: none;
+}
+#time-wrapper {
+	text-align: justify;
+}
+#time-wrapper:after {
+	content: "";
+	display: inline-block;
+	width: 100%;
+}
+/*Remove default styles*/
+input[type="range"] {
+	-webkit-appearance: none;
+	margin: 18px 0;
+	width: 100%;
+}
+input[type="range"]:focus {
+	outline: none;
+}
+/*Track & handle(thumb) styles*/
+/*Chrome*/
+input[type="range"]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 1em;
+	cursor: pointer;
+	background: #23b26d;
+	border-radius: 0px;
+	border: 1px solid #23b26d;
+}
+input[type="range"]::-webkit-slider-thumb {
+	border: 1px solid #f50039;
+	height: 2em;
+	width: 12px;
+	border-radius: 3px;
+	background: #f50039;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -0.5em;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+	background: #23b26d;
+}
+/*Firefox*/
+input[type="range"]::-moz-range-track {
+	width: 100%;
+	height: 1em;
+	cursor: pointer;
+	background: #23b26d;
+	border-radius: 0;
+	border: 1px solid #23b26d;
+}
+input[type="range"]::-moz-range-thumb {
+	border: 1px solid #f50039;
+	height: 2em;
+	width: 16px;
+	border-radius: 3px;
+	background: #f50039;
+	cursor: pointer;
+	-webkit-appearance: none;
+}
+/*IE*/
+input[type="range"]::-ms-track {
+	width: 100%;
+	height: 1em;
+	cursor: pointer;
+	background: #23b26d;
+	border-radius: 0;
+	border: 1px solid #23b26d;
+}
+input[type="range"]::-ms-fill-lower {
+	background: #2a6495;
+	border: 0.2px solid #010101;
+	border-radius: 2.6px;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type="range"]::-ms-fill-upper {
+	background: #3071a9;
+	border: 0.2px solid #010101;
+	border-radius: 2.6px;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type="range"]::-ms-thumb {
+	border: 1px solid #f50039;
+	height: 2em;
+	width: 16px;
+	border-radius: 3px;
+	background: #f50039;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -0.5em;
+}
+input[type="range"]:focus::-ms-fill-lower {
+	background: #3071a9;
+}
+input[type="range"]:focus::-ms-fill-upper {
+	background: #367ebd;
+}
+#bars-box {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0%;
+	opacity: 0;
+	transition: 2s;
+}
+.bar {
+	position: absolute;
+	bottom: 0;
+	width: 20%;
+	height: 50%;
+	animation-name: beat;
+	animation-duration: var(--bar-delay);
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+}
+#bars-box.active {
+	opacity: 1;
+	height: 100%;
+}
+.bar:nth-child(odd) {
+	background-color: green;
+}
+.bar:nth-child(even) {
+	background-color: red;
+}
+@keyframes beat {
+	0% {
+		height: var(--bar-max-height);
+	}
+	50% {
+		height: var(--bar-min-height);
+	}
+	100% {
+		height: var(--bar-max-height);
+	}
+}
+@media (max-width: 775px) {
+	#audio-box {
+		width: 75%;
+		padding: 1em;
+	}
+}
+
   
   /* The typewriter cursor effect */
   @keyframes blink {
