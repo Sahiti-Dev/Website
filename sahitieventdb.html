@@ -133,12 +133,67 @@
                                     
                                     <!-- <h4 style="padding-top: 2rem; text-align: center; text-decoration: underline;" class="wow fadeInLeft" data-wow-delay="300ms">Set A Reminder</h4> -->
                                     <div style="text-align: center;">
-                                        <button class="btn confer-btn wow fadeInRight" data-wow-delay="300ms" onclick="remind()">Set A Reminder?</button>
+                                        <button class="btn confer-btn wow fadeInRight" data-wow-delay="300ms" data-toggle="modal" data-target="#exampleModalCenter">Set A Reminder?</button>
                                     </div>
+                                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <h6 class="modal-title" id="exampleModalLongTitle" style="text-align: center;">Give Us your Name, Phone Number And E-mail Address and we will make sure to remind you.</h6>
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="contact_form">
+                                                    <form name=myform action="https://formspree.io/sahititla.vit@gmail.com"  method="POST">
+                                                        <div class="contact_input_area">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <input type="text" class="form-control mb-30" name="name" autocomplete="off"  placeholder="Your Name" required>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12 ">
+                                                                    <div class="form-group">
+                                                                        <input type="text" class="form-control mb-30" name="Phone" autocomplete="off"  placeholder="Mobile Number (WhatsApp)" required>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12 ">
+                                                                    <div class="form-group">
+                                                                        <input type="email" class="form-control mb-30" name="email" autocomplete="off"  placeholder="E-mail" required>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12 ">
+                                                                    <div class="form-group">
+                                                                        <input type="hidden" class="form-control mb-30" name="subject" autocomplete="off"  placeholder="Subject" style="height: auto;" required disabled value="Set Reminder on 26th Feb, 2021">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <textarea name="message"  class="form-control mb-30"  cols="30" rows="3" autocomplete="off" style="height: auto;" required>Your Message: Hey There! I Am Interested In Your Event Mathrubasha Do Remind Me at 2:30 am.</textarea>   
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12" style="text-align: center;" >
+                                                                    <button type="submit" name="submit" class="btn confer-btn">Remind Me :) </button>
+                                                                </div>
+            
+                                                                <div>
+                                                                    <input type="hidden" id="details" name="details" value="value">
+                                                                </div>
+                                                            
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                    </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                      </div>
                                     <br>
                                     <div id="hide" style="display: none;">
                                         <br>
-                                        <h6 style="text-align: center;">Give Us your Name, Phone Number And E-mail Address and we will make sure to remind you.</h6>
+                                        
                                         <br>
                                         <div class="contact_form">
                                         <form name=myform action="https://formspree.io/sahititla.vit@gmail.com"  method="POST">
@@ -180,11 +235,10 @@
                                                 </div>
                                             </div>
                                         </form>
-                                    </div>
+                                        </div>
                                     </div>
                                     <br>
-                                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfdbweKD4ItlhXSCmZmBqnhW2F8n6HIhs3Yau1zyTYMysTJ_w/viewform?embedded=true" 
-                                        width="360" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                                    
                                     </div>
                 </div>
                                             
