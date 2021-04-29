@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="Photos/sahiti-logo.png" type="image/gif" sizes="16x16">
 
-    <title>Database | Sahiti</title>
+    <title>Live Interaction | Sahiti</title>
 
 	<meta name="Sahiti" content="Sahiti | Telugu Literary Association of VIT Vellore" />
 	<meta name="description" content="Sahiti | Telugu Literary Association of VIT Vellore" />
@@ -32,7 +32,9 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="description" content="Sahiti | Telugu Literary Association of VIT Vellore">
 	<meta name="twitter:site" content="">
+
     <link rel="stylesheet" href="style.css?version=3">
+    <link rel="stylesheet" href="css/events.css">
     <link rel="stylesheet" href="css/style.css">
 
        <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -80,8 +82,8 @@
                         </div>
                         <div class="classynav">
                             <ul id="nav">
-                                <li ><a href="index.html">Home</a></li>
-                               <li ><a href="board.html">Board</a></li>
+                                <li><a href="index.html">Home</a></li>
+                               <li><a href="board.html">Board</a></li>
                                 <li><a href="events.html">Events</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
@@ -100,119 +102,54 @@
             </div>
         </div>
     </section>
-    
-    <section class="confer-blog-details-area section-padding-100-0">
-                    
-                    <div style="text-align: center;">
-                        <h3>We Are Glad You're A Part of This Club</h3>   
-                    <p>Please Fill In The Below Required Details</p> 
-                    </div>                  
-                    <div style="text-align: center;">
-                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc7tQBnCryObPUhIQWSlfpxrgBdYPI8Zk7wv2YgthAdlUeALw/viewform?embedded=true" width="400" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-                    </div>      
-                                        
-                                        
-                                
-    </section>
-                
-            </div>
 
+    <section class="confer-blog-details-area section-padding-100-0">
+        
+	
+    
+    <div style="text-align: center;">
+        <h3>We Are Glad You're A Part of This Club</h3>   
+    <p>Please Fill In The Below Required Details</p> 
+    </div>                  
+    <div style="text-align: center;">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc7tQBnCryObPUhIQWSlfpxrgBdYPI8Zk7wv2YgthAdlUeALw/viewform?embedded=true" width="400" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div> 
+
+    
+    
+    
+                     
+           
+    </section>
 
     <div id="footer"></div>
-       <!-- Swiper JS for YT vedios carousal-->
- 
-<script type="text/javascript" src="js/swiper-bundle.min.js"></script>
-<script>
-    function remind() {
-      var x = document.getElementById("hide");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
-    }
-    </script>
-<!-- Initialize Swiper -->
-<script>
 
-var swiper = new Swiper('.swiper1', {
-//   slidesPerView: 4,
-    spaceBetween: 10,
-    slidesPerGroup: 2,
-    // loop:true,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-    pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  breakpoints: {
-    100: {
-      slidesPerView: 2,
-      spaceBetween: 15,
-    },
-    640: {
-      slidesPerView: 3,
-      spaceBetween: 10,
-    },
-    768: {
-      slidesPerView: 4,
-      spaceBetween: 10,
-    },
-    1024: {
-      slidesPerView: 4,
-      spaceBetween: 25,
-    },
-  }
-});
-var swiper = new Swiper('.swiper2', {
-//   slidesPerView: 4,
-    spaceBetween: 10,
-    slidesPerGroup: 2,
-    loop:true,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-    pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  breakpoints: {
-    100: {
-      slidesPerView: 2,
-      spaceBetween: 15,
-    },
-    640: {
-      slidesPerView: 3,
-      spaceBetween: 10,
-    },
-    768: {
-      slidesPerView: 4,
-      spaceBetween: 10,
-    },
-    1024: {
-      slidesPerView: 4,
-      spaceBetween: 25,
-    },
-  }
-});
-</script>
-
-    <script>
-    // When the user scrolls the page, execute myFunction 
-    window.onscroll = function() {pscroll()};
-    
-    function pscroll() {
-      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrolled = (winScroll / height) * 100;
-      document.getElementById("myBar").style.width = scrolled + "%";
-    }
-    </script>
     <!-- <script src="js/jquery.min.js"></script> -->
+    <script>
+        // When the user scrolls the page, execute myFunction 
+        window.onscroll = function() {myFunction()};
+        
+        function myFunction() {
+          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          var scrolled = (winScroll / height) * 100;
+          document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
+    <script>
+        document.querySelector('body').addEventListener('mousemove',eyeball);
+        function eyeball() {
+            var eye = document.querySelectorAll('.eye');
+            eye.forEach(function (eye) {
+                let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2)
+                let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2)
+                let radian = Math.atan2(event.pageX - x, event.pageY - y)
+                let rot = (radian * (180 / Math.PI) * -1) + 270;
+                eye.style.transform = "rotate("+ rot + "deg)";
+            })
+            
+        }
+    </script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/confer.bundle.js"></script>
