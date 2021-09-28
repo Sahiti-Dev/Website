@@ -152,6 +152,18 @@ you can use the generic selector below, but it's slower:
 	text-transform: uppercase;
   }
   
+   #titlesub {
+	color: palevioletred;
+	/* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+	border-right: .15em solid #fff; 
+	white-space: nowrap; 
+	margin-top: 40px;
+	padding-right:00px;
+	letter-spacing: .5em;
+	animation: blink .5s step-end infinite alternate;
+	text-transform: uppercase;
+  }
+  
 /*audio for blogs*/
 
 #audio-box {
