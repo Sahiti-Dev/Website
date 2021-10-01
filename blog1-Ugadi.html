@@ -62,14 +62,17 @@
 <body>
     <style>
         .dark-mode {
-  background-color: black;
-  color: white;
-}
-
-    </style>
-    <style>
+            background-color: black;
+            color: white;
+        }
         a,a:focus{
             color: #007aff;
+        }
+        .breadcrumb-item+.breadcrumb-item::before{
+            color: yellow;
+        }
+        #st-2 .st-total > span{    
+        color: #25d366;
         }
     </style>
      <!-- <div id="preloader">
@@ -126,7 +129,7 @@
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="home.html">Home</a></li>
                           <li class="breadcrumb-item"><a href="blogs.html">Blogs</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Data</li>
+                          <li class="breadcrumb-item active" aria-current="page" style="color: #007aff;">Data</li>
                         </ol>
                       </nav>
                     <div style="font-weight: bold; font-size: 25px; text-align: center;" title="Copy Text" id="text">
@@ -148,6 +151,7 @@
                         </div>
                         <br>
                         <div style="text-align: end; margin-right: 20px;">—By <i>Nikhilesh Chand</i></div>
+                        <br><br>
                         <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
                         <table style="width: 100%;margin-top: 25px;">
                             <tr>
@@ -156,8 +160,6 @@
                                 <td><button type="button" style="float: right; margin-right: 20px;" 
                                     onclick="paudio()" class="btn btn-outline-primary btn-small">
                                     <i class="fa fa-volume-up"></i></button></td>
-                                
-                                
                             </tr>
                         </table>
                         
@@ -177,17 +179,14 @@
                         </div>
                         </div>
 
-                        
-
-                        
                         <div class="mt-5">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, sed atque. Libero in porro earum nesciunt excepturi natus deleniti ipsa nulla cumque illo vitae maiores iste obcaecati culpa, distinctio necessitatibus placeat incidunt magnam, totam repellat eveniet! Voluptatum ea veritatis nihil, incidunt ab est praesentium ad laborum non doloremque iure a quaerat amet officia similique dolore officiis aspernatur dicta consectetur eius perferendis, quod necessitatibus quibusdam? Esse, harum! Repudiandae, nisi? Perspiciatis quis tenetur minus ipsum sit fuga maiores! Unde molestias nemo ratione ea! Labore nostrum nisi, iure vitae ducimus quod illo cupiditate iusto, pariatur delectus aperiam repudiandae nobis vel minima id eaque quasi ratione molestias! Fugit voluptate magni ipsam sit aut accusamus sint pariatur dolorem suscipit tempore incidunt ea repellat distinctio autem possimus ab velit, vitae alias consectetur maxime repellendus ipsum perferendis ad. Illum tempora ullam, ut eligendi fugit quia dolorem ab molestiae enim magni sint cum blanditiis voluptatem facere facilis corrupti eaque nulla hic quo aspernatur necessitatibus repellat, perspiciatis recusandae. Maxime rem perspiciatis quaerat. Quaerat eius obcaecati recusandae quas exercitationem, doloremque, repellat ipsum, dicta et natus dignissimos. Sint itaque enim repellendus repellat deleniti consequuntur, consequatur ipsa alias expedita est delectu
                             s numquam dolorem voluptates illum! Quae eum aperiam cumque debitis, sit aliquam.
                         </div>
                         <br>
 
-<!-- Button code -->
-                        <div title="Add to Calendar" class="addeventatc">
+                        <!-- Button code -->
+                        <div title="Add to Calendar" class="addeventatc" style="z-index: 0;">
                             Add to Calendar
                             <span class="start">10/11/2021 02:00 PM</span>
                             <span class="end">10/11/2021 03:00 PM</span>
@@ -203,8 +202,14 @@
                             — By <i>Nikhilesh Chand</i>
                         </div>
                         <br>
+                        <br>
+                        <div style="text-align: center;" class="mt-5">
+                        What do you think?
+                        </div>
+                        <br>
                         <!-- ShareThis BEGIN --><div class="sharethis-inline-reaction-buttons"></div><!-- ShareThis END -->
                         <br><br>
+                        <div id="disqus_thread"></div>
                         <a href="blogs.html" style="color: rgb(0, 122, 255);"> <i class="fa fa-chevron-left"></i> More Blogs</a>
                     </div>
                         
@@ -215,13 +220,33 @@
     <div id="footer"></div>
        <!-- Swiper JS for YT vedios carousal-->
  
-<script type="text/javascript" src="js/swiper-bundle.min.js"></script>
-<script>
-    function darkmode() {
-       var element = document.body;
-       element.classList.toggle("dark-mode");
-    }
+    <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+    <script>
+        function darkmode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+        }
     </script>
+    <script id="dsq-count-scr" src="//sahiti-dev-herokuapp-com.disqus.com/count.js" async></script>
+    <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        
+        var disqus_config = function () {
+        this.page.url = sahiti-dev.herokuapp.com/blog1-Ugadi.html;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = blog1; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+    
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://sahiti-dev-herokuapp-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
 <!-- Initialize Swiper -->
 <script>
     var swiper = new Swiper('.swiper-container', {
