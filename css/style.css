@@ -28,7 +28,9 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="your-class-prefix"] {
 */
-
+.copyx{
+	visibility: hidden;
+}
 .breadcrumb {
     background-color: transparent;
 	padding-left: 0;
