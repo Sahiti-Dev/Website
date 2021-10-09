@@ -60,21 +60,7 @@
 </head>
 
 <body>
-    <style>
-        .dark-mode {
-            background-color: black;
-            color: white;
-        }
-        a,a:focus{
-            color: #007aff;
-        }
-        .breadcrumb-item+.breadcrumb-item::before{
-            color: yellow;
-        }
-        #st-2 .st-total > span{    
-        color: #25d366;
-        }
-    </style>
+  
      <!-- <div id="preloader">
         <div class="loader"></div>
     </div> -->
@@ -153,30 +139,58 @@
                         <div style="text-align: end; margin-right: 20px;">—By <i>Nikhilesh Chand</i></div>
                         <br><br>
                         <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
-                        <table style="width: 100%;margin-top: 25px;">
+                        <br><br><br>
+                        <table style="width: 100%">
                             <tr>
                                 <td><button type="button" class="btn btn-outline-success btn-sm active" data-toggle="button" aria-pressed="true" onclick="darkmode()" autocomplete="off">
                                     Dark Mode</button></td>
-                                <td><button type="button" style="float: right; margin-right: 20px;" 
-                                    onclick="paudio()" class="btn btn-outline-primary btn-small">
-                                    <i class="fa fa-volume-up"></i></button></td>
+                                <!-- <button type="button"  class="btn btn-outline-primary btn-small"></button> -->
+                                <td style="font-size: 20px;"><i onclick="paudio()" class="fa fa-volume-up fa-10x volumepod"></i></td>
                             </tr>
                         </table>
                         
-                        <div id="audio1" style="margin: 120px auto -75px auto;display: none;">
-                            <audio id="audio" src="Photos/game_of_throne_intro.mp3" preload="auto" style="display: none;"></audio>
-                        <div id="audio-box">
-                        	<div id="controls-wrapper">
-                        		<span id="rw" class="fa fa-backward"></span>
-                        		<span id="play" class="fa fa-play"></span>
-                        		<span id="ff" class="fa fa-forward"></span>
-                        		<input id="progress" type="range" min="0" max="151" value="0">
-                        	</div>
-                        	<div id="time-wrapper">
-                        		<span id="time-played"></span>
-                        		<span id="end-time">02:31</span>
-                        	</div>
-                        </div>
+                        <div id="audio1" style="margin: 80px auto 25px auto;display: none;">
+                            <!-- <audio id="audio" src="Photos/game_of_throne_intro.mp3" preload="auto" style="display: none;"></audio>
+                            <div id="audio-box">
+                                <div id="controls-wrapper">
+                                    <span id="rw" class="fa fa-backward"></span>
+                                    <span id="play" class="fa fa-play"></span>
+                                    <span id="ff" class="fa fa-forward"></span>
+                                    <input id="progress" type="range" min="0" max="151" value="0">
+                                </div>
+                                <div id="time-wrapper">
+                                    <span id="time-played"></span>
+                                    <span id="end-time">02:31</span>
+                                </div>
+                            </div> -->
+
+                            <!-- new podcast player -->
+
+
+                            <!-- <div class="pcast-player">
+                                <div class="pcast-player-controls">
+                                    <br><em style="padding-left: 5px;">Lorem Ipsum</em>
+                                    <br><br>
+                                    <span class="pcast-currenttime pcast-time">00:00:00</span>
+                                  <progress class="pcast-progress" value="0"></progress>
+                                  <span class="pcast-duration pcast-time">00:00:00</span>
+                                  <br>
+                                  <br><br>
+                                    <button class="pcast-rewind" ><i class="fa fa-fast-backward"></i><span>Rewind</span></button>
+                                  <button style="margin-left:10px" class="pcast-play"><i class="fa fa-play"></i><span>Play</span></button>
+                                  <button style="margin-left:10px" class="pcast-pause"><i class="fa fa-pause"></i><span>Pause</span></button>
+                                  
+                                  <button style="margin-left:10px" class="pcast-forward"><i class="fa fa-fast-forward"></i><span>Forward</span></button>
+                                  <button  style="float: right; margin-right: 10px;" class="pcast-speed">1x</button>
+                                  <button  style="float: right; margin-right: 10px;" class="pcast-mute"><i class="fa fa-volume-up"></i><span>Mute/Unmute</span></button>
+                                  
+                                </div>
+                                <audio src="https://soundcloud.com/user-987361021/game-of-throne-intro/s-tMeQLEcANhr?si=7df4925eb55d4bb68d8e7863547a3eb8"></audio>
+                                
+                                
+                            </div> -->
+                            <iframe width="100%" height="200" scrolling="no" frameborder="no" allow="autoplay" src="https://kutt.it/sahitiherokublog1"></iframe>
+                            <!-- <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-987361021" title="Tommy" target="_blank" style="color: #cccccc; text-decoration: none;">Tommy</a> · <a href="https://soundcloud.com/user-987361021/game-of-throne-intro/s-tMeQLEcANhr" title="Game Of Throne Intro" target="_blank" style="color: #cccccc; text-decoration: none;">Game Of Throne Intro</a></div> -->
                         </div>
 
                         <div class="mt-5">
@@ -210,7 +224,13 @@
                         <!-- ShareThis BEGIN --><div class="sharethis-inline-reaction-buttons"></div><!-- ShareThis END -->
                         <br><br>
                         <div id="disqus_thread"></div>
+                        <br><br>
                         <a href="blogs.html" style="color: rgb(0, 122, 255);"> <i class="fa fa-chevron-left"></i> More Blogs</a>
+                        <br><br><br>
+                        <blockquote style="text-align: center; font-size: 10px;">
+                            <i>" Sometimes I’ll start a sentence, and I don’t even know where it’s going. I just hope I find it along the way.
+                            "</i>
+                        </blockquote>
                     </div>
                         
                 </section>
@@ -221,6 +241,7 @@
        <!-- Swiper JS for YT vedios carousal-->
  
     <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+    <!-- <script type="text/javascript" src="js/paudio.js"></script> -->
     <script>
         function darkmode() {
         var element = document.body;
@@ -298,7 +319,14 @@
     alert("Page URL has been copied!!")
     }
     </script>
-
+<script>
+    $(document).ready(function(){
+      
+      $(".btn2").click(function(){
+        $("iframe").fadeIn();
+      });
+    });
+    </script>
   <!-- for audio -->
     <script>
        
