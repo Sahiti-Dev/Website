@@ -28,6 +28,97 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="your-class-prefix"] {
 */
+
+/* podcast player css */
+/* .visually-hidden, .pcast-player button span {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+   IE7 
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0 !important;
+	border: 0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
+/* Pcast Player */
+/*
+.pcast-player .pcast-player-controls {
+	box-sizing: border-box;
+	background: #000;
+	color: #fff;
+	font-size: 14px;
+	height: 172px;
+	overflow: hidden;
+	padding: 5px;
+	
+}
+.pcast-player button {
+	background: #2a2a2a;
+	color: #fff;
+	border: 0;
+	border-radius: 2px;
+	padding: 5px;
+	line-height: 22px;
+	-webkit-appreance: none;
+	min-width: 32px;
+	
+}
+.pcast-player progress {
+	padding-left: 12px;
+	height: 13px;
+	width: calc(100% - 131px);
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.pcast-player progress[value]::-webkit-progress-bar {
+	background-color: #555;
+	border-radius: 0;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+.pcast-player progress[value]::-webkit-progress-value {
+	background: #fff;
+}
+.pcast-player .pcast-time {
+	display: inline-block;
+	font-size: 13px;
+	padding: 0 5px;
+	text-align: center;
+	width: 4em;
+}
+.pcast-player .pcast-speed {
+	width: 2.5em;
+}
+.pcast-player .pcast-download {
+	font-size: 12px;
+	margin-top: 0.5em;
+	display: inline-block;
+	color: black;
+}
+ /* podcast player css */
+
+ /*dark mode */
+.dark-mode {
+	background-color: black;
+	color: white;
+}
+a,a:focus{
+	color: #007aff;
+}
+.breadcrumb-item+.breadcrumb-item::before{
+	color: yellow;
+}
+#st-2 .st-total > span{    
+color: #25d366;
+}
+
+/* volume podcast icon */
+.volumepod{
+	float: right; margin-right: 20px; margin-top: -6px; color: #55AACE; padding: 5px 10px;
+	cursor: pointer;
+} */
+
 .copyx{
 	visibility: hidden;
 }
