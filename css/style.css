@@ -98,6 +98,66 @@ you can use the generic selector below, but it's slower:
 }
  /* podcast player css */
 
+ /*volume icon */
+.sound {
+	 width: 100px;
+	 height: 100px;
+	 position: relative;
+	 cursor: pointer;
+	 display: inline-block;
+}
+ .sound--icon {
+	 color: #007aff;
+	 width: 100%;
+	 height: 100%; 
+	 line-height: 100%!important;
+	 font-size: 30px!important; 
+	 display: block !important;
+	 margin: auto;
+     margin-top: 38px;
+     margin-left: 35px;
+}
+ .sound--wave {
+	 position: absolute;
+	 border: 4px solid transparent;
+	 border-right: 4px solid #007aff;
+	 border-radius: 50%;
+	 transition: all 200ms;
+	 margin: auto;
+	 top: 2px;
+	 bottom: 0;
+	 left: 0;
+	 right: 0;
+}
+ .sound--wave_one {
+	 width: 15%;
+	 height: 15%;
+}
+ .sound--wave_two {
+	 width: 30%;
+	 height: 30%;
+}
+ .sound--wave_three {
+	 width: 50%;
+	 height: 50%;
+}
+ .sound-mute .sound--wave {
+	 border-radius: 0;
+	 width: 25%;
+	 height: 25%;
+	 border-width: 0 4px 0 0;
+}
+ .sound-mute .sound--wave_one {
+	 transform: rotate(45deg) translate3d(0, -50%, 0);
+}
+ .sound-mute .sound--wave_two {
+	 transform: rotate(-45deg) translate3d(0, 50%, 0);
+}
+ .sound-mute .sound--wave_three {
+	 transform: rotate(-45deg) translate3d(0, 50%, 0);
+}
+/*volume icon */
+
  /*dark mode */
 .dark-mode {
 	background-color: black;

@@ -60,11 +60,6 @@
 </head>
 
 <body>
-  
-     <!-- <div id="preloader">
-        <div class="loader"></div>
-    </div> -->
-    
     <header class="header-area">
         <div class="progress1">
             <div class="progress-container">
@@ -145,7 +140,14 @@
                                 <td><button type="button" class="btn btn-outline-success btn-sm active" data-toggle="button" aria-pressed="true" onclick="darkmode()" autocomplete="off">
                                     Dark Mode</button></td>
                                 <!-- <button type="button"  class="btn btn-outline-primary btn-small"></button> -->
-                                <td style="font-size: 20px;"><i onclick="paudio()" class="fa fa-volume-up fa-10x volumepod"></i></td>
+                                <td style="float: right;">
+                                    <div class="sound" onclick="paudio()">
+                                        <div class="sound--icon fa fa-volume-off"></div>
+                                        <div class="sound--wave sound--wave_one"></div>
+                                        <div class="sound--wave sound--wave_two"></div>
+                                        <div class="sound--wave sound--wave_three"></div>
+                                      </div>
+                                </td>
                             </tr>
                         </table>
                         
@@ -243,6 +245,9 @@
     <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
     <!-- <script type="text/javascript" src="js/paudio.js"></script> -->
     <script>
+        $('.sound').click(function() {
+  $(this).toggleClass('sound-mute');
+});
         function darkmode() {
         var element = document.body;
         element.classList.toggle("dark-mode");
