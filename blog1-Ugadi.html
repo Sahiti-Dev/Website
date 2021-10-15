@@ -137,8 +137,12 @@
                         <br><br><br>
                         <table style="width: 100%">
                             <tr>
-                                <td><button type="button" class="btn btn-outline-success btn-sm active" data-toggle="button" aria-pressed="true" onclick="darkmode()" autocomplete="off">
-                                    Dark Mode</button></td>
+                                <!-- <td><button type="button" class="btn btn-outline-success btn-sm active" data-toggle="button" aria-pressed="true" onclick="darkmode()" autocomplete="off">
+                                    Dark Mode</button></td> -->
+                                    <td><div class="checkbox-con" onclick="darkmode()">
+                                        <input id="checkbox" type="checkbox">
+                                        <label for="checkbox" style="margin-top: 6px;">Darkmode</label>
+                                      </div></td>
                                 <!-- <button type="button"  class="btn btn-outline-primary btn-small"></button> -->
                                 <td style="float: right;">
                                     <div class="sound" onclick="paudio()">
@@ -213,7 +217,7 @@
                             <span class="alarm_reminder">15</span>
                         </div>
                         
-                        
+                        <!-- powr BEGIN --><div class="powr-form-builder" id="sharethis-form-builder-61532de98c21ea001a650bfb"></div><!-- powr END -->
                         <div class="mt-5" style="text-align: end;">
                             — By <i>Nikhilesh Chand</i>
                         </div>
@@ -225,9 +229,17 @@
                         <br>
                         <!-- ShareThis BEGIN --><div class="sharethis-inline-reaction-buttons"></div><!-- ShareThis END -->
                         <br><br>
-                        <div id="disqus_thread"></div>
+                        <div id="cmt-b-1" style="padding-top: 150px;">
+                            <div id="disqus_thread" style="padding-top: 150px;"></div>
+                        </div>
+                        
                         <br><br>
-                        <a href="blogs.html" style="color: rgb(0, 122, 255);"> <i class="fa fa-chevron-left"></i> More Blogs</a>
+                        <!-- <a href="blogs.html" style="color: rgb(0, 122, 255);"> <i class="fa fa-chevron-left"></i> More Blogs</a> -->
+                        <button class="cta" onclick="location.href='blogs.html'" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="#007aff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H6M12 5l-7 7 7 7"/></svg>
+                            <span style="color: #007aff;"> More Blogs </span>
+                            
+                          </button>
                         <br><br><br>
                         <blockquote style="text-align: center; font-size: 10px;">
                             <i>" Sometimes I’ll start a sentence, and I don’t even know where it’s going. I just hope I find it along the way.

@@ -97,7 +97,96 @@ you can use the generic selector below, but it's slower:
 	color: black;
 }
  /* podcast player css */
+/*toggle button*/
+.checkbox-con {
+	margin: 10px;
+	display: flex;
+	align-items: center;
+   }
+   
+   .checkbox-con input[type="checkbox"] {
+	appearance: none;
+	width: 56px;
+	height: 27px;
+	border: 2px solid #ff0000;
+	border-radius: 20px;
+	background: #f1e1e1;
+	position: relative;
+	box-sizing: border-box;
+   }
+   
+   .checkbox-con input[type="checkbox"]::before {
+	content: "";
+	width: 14px;
+	height: 14px;
+	background: rgba(234, 7, 7, 0.5);
+	border: 2px solid #ea0707;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 0;
+	transform: translate(30%, 15%);
+	transition: all 0.3s ease-in-out;
+   }
+   
+   .checkbox-con input[type="checkbox"]::after {
+	content: url("data:image/svg+xml,%3Csvg xmlns='://www.w3.org/2000/svg' width='23' height='23' viewBox='0 0 23 23' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.55021 5.84315L17.1568 16.4498L16.4497 17.1569L5.84311 6.55026L6.55021 5.84315Z' fill='%23EA0707' fill-opacity='0.89'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17.1567 6.55021L6.55012 17.1568L5.84302 16.4497L16.4496 5.84311L17.1567 6.55021Z' fill='%23EA0707' fill-opacity='0.89'/%3E%3C/svg%3E");
+	position: absolute;
+	top: 0;
+	left: 20px;
+   }
+   
+   .checkbox-con input[type="checkbox"]:checked {
+	border: 2px solid #02c202;
+	background: #e2f1e1;
+   }
+   
+   .checkbox-con input[type="checkbox"]:checked::before {
+	background: rgba(2, 194, 2, 0.5);
+	border: 2px solid #02c202;
+	transform: translate(240%, 13%);
+	transition: all 0.3s ease-in-out;
+   }
+   
+   
+   
+   .checkbox-con label {
+	margin-left: 10px;
+	cursor: pointer;
+	user-select: none;
+   }
+   
 
+/*toggle button*/
+
+/*blogs back*/
+
+.cta {
+	border: none;
+	background: none;
+   }
+   
+   .cta span {
+	padding-bottom: 7px;
+	letter-spacing: 4px;
+	font-size: 15px;
+	text-transform: uppercase;
+	padding-left: 5px;
+   }
+   
+   .cta svg {
+	transform: translateX(8px);
+	transition: all 0.3s ease;
+   }
+   
+   .cta:hover svg {
+	transform: translateX(0);
+   }
+   
+   .cta:active svg {
+	transform: scale(0.9);
+   }/*blogs back*/
+   
  /*volume icon */
 .sound {
 	 width: 100px;
@@ -105,6 +194,8 @@ you can use the generic selector below, but it's slower:
 	 position: relative;
 	 cursor: pointer;
 	 display: inline-block;
+	 padding-right: 20px;
+	 margin-right: 2px;
 }
  .sound--icon {
 	 color: #007aff;
@@ -114,7 +205,7 @@ you can use the generic selector below, but it's slower:
 	 font-size: 30px!important; 
 	 display: block !important;
 	 margin: auto;
-     margin-top: 38px;
+     margin-top: 35px;
      margin-left: 35px;
 }
  .sound--wave {
@@ -124,7 +215,7 @@ you can use the generic selector below, but it's slower:
 	 border-radius: 50%;
 	 transition: all 200ms;
 	 margin: auto;
-	 top: 2px;
+	 top: 0px;
 	 bottom: 0;
 	 left: 0;
 	 right: 0;
@@ -138,8 +229,8 @@ you can use the generic selector below, but it's slower:
 	 height: 30%;
 }
  .sound--wave_three {
-	 width: 50%;
-	 height: 50%;
+	 width: 45%;
+	 height: 45%;
 }
  .sound-mute .sound--wave {
 	 border-radius: 0;
