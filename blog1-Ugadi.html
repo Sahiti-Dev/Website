@@ -46,6 +46,9 @@
 <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/alasql/0.3.7/alasql.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.9.2/xlsx.core.min.js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -60,6 +63,26 @@
 </head>
 
 <body>
+    <script>
+        function SubForm (){
+            $.ajax({
+                url:'https://api.apispreadsheets.com/data/20133/',
+                type:'post',
+                data:$("#myForm").serializeArray(),
+                success: function(){
+                  alert("Form Data Submitted :)")
+                },
+                error: function(){
+                  alert("There was an error :(")
+                }
+            });
+        }
+        </script>
+    <style>
+        div[data-role="form-footer"]{
+            display: block;
+}
+    </style>
     <header class="header-area">
         <div class="progress1">
             <div class="progress-container">
@@ -195,7 +218,8 @@
                                 
                                 
                             </div> -->
-                            <iframe width="100%" height="200" scrolling="no" frameborder="no" allow="autoplay" src="https://kutt.it/sahitiherokublog1"></iframe>
+                            <iframe src="https://anchor.fm/rslash/embed/episodes/rMaliciouscompliance-Sue-Me--Sure--NO-WAIT-e195j6e" height="250px" width="800px" frameborder="0" scrolling="no"></iframe>
+                            <!-- <iframe width="100%" height="200" scrolling="no" frameborder="no" allow="autoplay" src="https://kutt.it/sahitiherokublog1"></iframe> -->
                             <!-- <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-987361021" title="Tommy" target="_blank" style="color: #cccccc; text-decoration: none;">Tommy</a> · <a href="https://soundcloud.com/user-987361021/game-of-throne-intro/s-tMeQLEcANhr" title="Game Of Throne Intro" target="_blank" style="color: #cccccc; text-decoration: none;">Game Of Throne Intro</a></div> -->
                         </div>
 
@@ -221,8 +245,28 @@
                         <div class="mt-5" style="text-align: end;">
                             — By <i>Nikhilesh Chand</i>
                         </div>
-                        <br>
-                        <br>
+                        <br><br>
+                        <div style="font-weight: bold; font-size: 25px; text-align: center;"><span style="border-bottom: 2px solid black;">Subscribe To Us</span></div>
+                              
+                              <div class="container">
+                                <div class="col-md-4 mx-auto bg-white shadow p-3 py-5 mt-5">
+                                  <form id="contactForm" name="contact-form">
+                                    <div class="alert">Your message has been sent</div>
+                                    <div class="form-floating">
+                                      <label for="name" style="color: black;">Name :</label>
+                                      <input style="border-radius: 0;" type="text" name="name" id="name" required autofocus class="border-dark shadow-sm mb-3 form-control"
+                                        placeholder="Name">
+                                    </div>
+                                    <div class="form-floating">
+                                      <label for="email" style="color: black;">Email :</label>
+                                      <input type="email" style="border-radius: 0;" name="email" required autofocus id="email" class="border-dark shadow-sm mb-3 form-control" placeholder="Email">
+                                    </div>
+                                    <button type="submit" id="subs">SUBSCRIBE NOW</button>
+                                  </form>
+                                </div>
+                              </div>
+
+                        <br><br>
                         <div style="text-align: center;" class="mt-5">
                         What do you think?
                         </div>
@@ -230,21 +274,19 @@
                         <!-- ShareThis BEGIN --><div class="sharethis-inline-reaction-buttons"></div><!-- ShareThis END -->
                         <br><br>
                         <div id="cmt-b-1" style="padding-top: 150px;">
-                            <div id="disqus_thread" style="padding-top: 150px;"></div>
+                            <div id="disqus_thread"></div>
                         </div>
                         
                         <br><br>
-                        <!-- <a href="blogs.html" style="color: rgb(0, 122, 255);"> <i class="fa fa-chevron-left"></i> More Blogs</a> -->
-                        <button class="cta" onclick="location.href='blogs.html'" type="button">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="#007aff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H6M12 5l-7 7 7 7"/></svg>
-                            <span style="color: #007aff;"> More Blogs </span>
-                            
-                          </button>
+                        <a href="blogs.html" style="color: rgb(0, 122, 255);"> <i class="fa fa-chevron-left"></i> More Blogs</a>
+                        
                         <br><br><br>
                         <blockquote style="text-align: center; font-size: 10px;">
-                            <i>" Sometimes I’ll start a sentence, and I don’t even know where it’s going. I just hope I find it along the way.
-                            "</i>
+                            <i>" You know what they say ‘Fool me once, strike one, but fool me twice… strike three.’"</i>
                         </blockquote>
+
+                        <div>
+                        </div>
                     </div>
                         
                 </section>
@@ -253,7 +295,154 @@
 
     <div id="footer"></div>
        <!-- Swiper JS for YT vedios carousal-->
- 
+  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  <script src="js/firebase.js"></script>
+       
+    <script>
+  //     
+        var questions = [
+  {question:"What's your name?"},
+  {question:"What's your email?", pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/}
+]
+
+/**********
+
+  !!!!!
+  New Version: https://codepen.io/arcs/pen/rYXrNQ
+  !!!!!
+  
+  Credits for the design go to XavierCoulombeM
+  https://dribbble.com/shots/2510592-Simple-register-form
+  
+  This Pen uses no libraries except fonts and should 
+  work on all modern browsers
+  
+  The answers are stored in the `questions` array
+  with the key `value`. 
+
+ **********/
+
+;(function(){
+
+  var tTime = 100  // transition transform time from #register in ms
+  var wTime = 200  // transition width time from #register in ms
+  var eTime = 1000 // transition width time from inputLabel in ms
+
+  // init
+  // --------------
+  var position = 0
+
+  putQuestion()
+
+  progressButton.addEventListener('click', validate)
+  inputField.addEventListener('keyup', function(e){
+    transform(0, 0) // ie hack to redraw
+    if(e.keyCode == 13) validate()
+  })
+
+  // functions
+  // --------------
+
+  // load the next question
+  function putQuestion() {
+    inputLabel.innerHTML = questions[position].question
+    inputField.value = ''
+    inputField.type = questions[position].type || 'text'  
+    inputField.focus()
+    showCurrent()
+  }
+  
+  // when all the questions have been answered
+  function done() {
+    
+    // remove the box if there is no next question
+    register.className = 'close'
+    
+    // add the h1 at the end with the welcome text
+    var ha = document.createElement('ha')
+    ha.appendChild(document.createTextNode('Thanks ' + questions[0].value + '!'))
+    setTimeout(function() {
+      register.parentElement.appendChild(ha)     
+      setTimeout(function() {ha.style.opacity = 1}, 50)
+    }, eTime)
+    
+    let csvContent = "data:text/csv;charset=utf-8,";
+
+    questions.forEach(function(rowArray) {
+    let row = rowArray.join(",");
+    csvContent += row + "\r\n";
+});
+var encodedUri = encodeURI(csvContent);
+var link = document.createElement("a");
+link.setAttribute("href", encodedUri);
+// link.setAttribute("download", "my_data.csv");
+// document.body.appendChild(link); 
+// link.click();
+  }
+
+  // when submitting the current question
+  function validate() {
+
+    // set the value of the field into the array
+    questions[position].value = inputField.value
+
+    // check if the pattern matches
+    if (!inputField.value.match(questions[position].pattern || /.+/)) wrong()
+    else ok(function() {
+      
+      // set the progress of the background
+      progress.style.width = ++position * 100 / questions.length + 'vw'
+
+      // if there is a new question, hide current and load next
+      if (questions[position]) hideCurrent(putQuestion)
+      else hideCurrent(done)
+             
+    })
+
+  }
+
+  // helper
+  // --------------
+
+  function hideCurrent(callback) {
+    inputContainer.style.opacity = 0
+    inputProgress.style.transition = 'none'
+    inputProgress.style.width = 0
+    setTimeout(callback, wTime)
+  }
+
+  function showCurrent(callback) {
+    inputContainer.style.opacity = 1
+    inputProgress.style.transition = ''
+    inputProgress.style.width = '100%'
+    setTimeout(callback, wTime)
+  }
+
+  function transform(x, y) {
+    register.style.transform = 'translate(' + x + 'px ,  ' + y + 'px)'
+  }
+
+  function ok(callback) {
+    register.className = ''
+    setTimeout(transform, tTime * 0, 0, 10)
+    setTimeout(transform, tTime * 1, 0, 0)
+    setTimeout(callback,  tTime * 2)
+  }
+
+  
+
+}())
+
+$('input').on('focusin', function() {
+  $(this).parent().find('label').addClass('active1');
+});
+
+$('input').on('focusout', function() {
+  if (!this.value) {
+    $(this).parent().find('label').removeClass('active1');
+  }
+});
+    </script> 
     <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
     <!-- <script type="text/javascript" src="js/paudio.js"></script> -->
     <script>
@@ -355,31 +544,31 @@ var ff = document.getElementById("ff");
 var rw = document.getElementById("rw");
 var bars = document.getElementById("bars-box");
 
-playBtn.addEventListener("click", function (e) {
-	if (audio.paused) {
-		audio.play();
-		playBtn.classList.remove("fa-play");
-		playBtn.classList.add("fa-pause");
-		bars.classList.add("active");
-	} else {
-		audio.pause();
-		playBtn.classList.remove("fa-pause");
-		playBtn.classList.add("fa-play");
-		bars.classList.remove("active");
-	}
-});
+// playBtn.addEventListener("click", function (e) {
+// 	if (audio.paused) {
+// 		audio.play();
+// 		playBtn.classList.remove("fa-play");
+// 		playBtn.classList.add("fa-pause");
+// 		bars.classList.add("active");
+// 	} else {
+// 		audio.pause();
+// 		playBtn.classList.remove("fa-pause");
+// 		playBtn.classList.add("fa-play");
+// 		bars.classList.remove("active");
+// 	}
+// });
 
-rw.addEventListener("click", function (e) {
-	audio.currentTime -= 5;
-});
+// rw.addEventListener("click", function (e) {
+// 	audio.currentTime -= 5;
+// });
 
-ff.addEventListener("click", function (e) {
-	audio.currentTime += 5;
-});
+// ff.addEventListener("click", function (e) {
+// 	audio.currentTime += 5;
+// });
 
-prog.addEventListener("mouseUp", function (e) {
-	audio.currentTime = prog.value;
-});
+// prog.addEventListener("mouseUp", function (e) {
+// 	audio.currentTime = prog.value;
+// });
 
 function paddZero(i) {
 	if (i < 10) {
@@ -388,26 +577,26 @@ function paddZero(i) {
 	return i;
 }
 
-function update() {
-	var played = audio.currentTime;
-	prog.value = audio.currentTime;
-	played =
-		played < 60
-			? "00:" + paddZero(Math.floor(played))
-			: paddZero(Math.floor(played / 60)) +
-			  ":" +
-			  paddZero(Math.floor(played % 60));
-	playTime.innerText = played;
-	if (audio.currentTime >= 151) {
-		playBtn.classList.remove("fa-pause");
-		playBtn.classList.add("fa-play");
-		audio.pause();
-		bars.classList.remove('active');
-	}
-	requestAnimationFrame(update);
-}
+// function update() {
+// 	var played = audio.currentTime;
+// 	prog.value = audio.currentTime;
+// 	played =
+// 		played < 60
+// 			? "00:" + paddZero(Math.floor(played))
+// 			: paddZero(Math.floor(played / 60)) +
+// 			  ":" +
+// 			  paddZero(Math.floor(played % 60));
+// 	playTime.innerText = played;
+// 	if (audio.currentTime >= 151) {
+// 		playBtn.classList.remove("fa-pause");
+// 		playBtn.classList.add("fa-play");
+// 		audio.pause();
+// 		bars.classList.remove('active');
+// 	}
+// 	requestAnimationFrame(update);
+// }
 
-update();
+// update();
 
     </script>
     <script>

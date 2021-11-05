@@ -22,6 +22,220 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+/* signup form in blog*/
+/* https://codepen.io/arcs/pen/	OmZaex*/
+/* https://www.codingnepalweb.com/responsive-contact-us-form-html-css/*/
+.alert{
+	text-align: center;
+	padding:10px;
+	background:#79c879;
+	color:#fff;
+	margin-bottom:10px;
+	display:none;
+  }
+  
+button,
+#subs::after {
+ padding: 16px 20px;
+ font-size: 18px;
+ background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
+ border: 0;
+ color: #fff;
+ letter-spacing: 3px;
+ line-height: 1;
+ box-shadow: 6px 0px 0px #00e6f6;
+ outline: transparent;
+ position: relative;
+}
+
+#subs::after {
+ --slice-0: inset(50% 50% 50% 50%);
+ --slice-1: inset(80% -6px 0 0);
+ --slice-2: inset(50% -6px 30% 0);
+ --slice-3: inset(10% -6px 85% 0);
+ --slice-4: inset(40% -6px 43% 0);
+ --slice-5: inset(80% -6px 5% 0);
+ content: "AVAILABLE NOW";
+ display: block;
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: linear-gradient(45deg, transparent 3%, #00e6f6 3%, #00e6f6 5%, #ff013c 5%);
+ text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+ clip-path: var(--slice-0);
+}
+
+#subs:hover::after {
+ animation: 1s glitch;
+ animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+ 0% {
+  clip-path: var(--slice-1);
+  transform: translate(-20px, -10px);
+ }
+
+ 10% {
+  clip-path: var(--slice-3);
+  transform: translate(10px, 10px);
+ }
+
+ 20% {
+  clip-path: var(--slice-1);
+  transform: translate(-10px, 10px);
+ }
+
+ 30% {
+  clip-path: var(--slice-3);
+  transform: translate(0px, 5px);
+ }
+
+ 40% {
+  clip-path: var(--slice-2);
+  transform: translate(-5px, 0px);
+ }
+
+ 50% {
+  clip-path: var(--slice-3);
+  transform: translate(5px, 0px);
+ }
+
+ 60% {
+  clip-path: var(--slice-4);
+  transform: translate(5px, 10px);
+ }
+
+ 70% {
+  clip-path: var(--slice-2);
+  transform: translate(-10px, 10px);
+ }
+
+ 80% {
+  clip-path: var(--slice-5);
+  transform: translate(20px, -10px);
+ }
+
+ 90% {
+  clip-path: var(--slice-1);
+  transform: translate(-10px, 0px);
+ }
+
+ 100% {
+  clip-path: var(--slice-1);
+  transform: translate(0);
+ }
+}
+
+#progress {
+	position: absolute;
+	background: white;
+	height: 10vh;
+	width: 0;
+	transition: width 0.2s ease-in-out;
+  }
+  
+  .center {
+	height: 10vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  /******
+	Form
+   ******/
+  
+  #register {
+	background: #fff;
+	position: relative;
+	width: 410px;
+	padding: 2px 15px 20px 15px;
+	box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
+	transition: transform .1s ease-in-out;
+  }
+  
+  #register.close {
+	width: 0;
+	padding: 0;
+	overflow: hidden;
+	transition: .8s ease-in-out;
+	box-shadow: 0 16px 24px 2px rgba(0,0,0,0);
+  }
+  
+  .next {
+	position: absolute;
+	right: 20px;
+	bottom: 10px;
+	font-size: 40px;
+	color: #25a3ff;
+	float: right;
+	cursor: pointer;
+  }
+  .next:hover {color: #333}
+  .wrong .next {color: #ff2d26}
+  .close .next {color: #fff}
+  
+  #inputContainer {
+	position: relative;
+	opacity: 0;
+	width: 350px;
+	margin-top: 25px;
+	transition: opacity .3s ease-in-out;
+  }
+  
+  #inputContainer input {
+	width: 100%;
+	padding: 0 5px;
+	border: none;
+	font-size: 20px;
+	font-weight: bold;
+	outline: 0;
+	background: transparent;
+	box-shadow:none;
+  }
+  ha {
+	position: absolute;
+	color: #000;
+	font-size: large;
+	opacity: 0;
+	transition: .8s ease-in-out;
+  }
+  #inputLabel {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	left: 0;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 0 5px;
+	transition: .2s ease-in-out;
+  }
+  
+  #inputContainer input:valid + #inputLabel {
+	top: -15px;
+	font-size: 11px;
+	font-weight: normal;
+	color: #9e9e9e;
+  }
+  
+  #inputProgress {
+	position: absolute;
+	border-bottom: 2px solid #25a3ff;
+	padding: 3px 0;
+	width: 0;
+	transition: width .6s ease-in-out;
+  }
+  
+  .wrong #inputProgress {
+	border-color: #ff2d26;
+  }
+
+/* contact form in blog*/
+
+
 /* Use the following CSS code if you want to have a class per icon */
 /*
 Instead of a list of all class selectors,
@@ -159,8 +373,14 @@ you can use the generic selector below, but it's slower:
 
 /*toggle button*/
 
-/*blogs back*/
+/*add event calendar*/
+.addeventatc_dropdown .copyx{
+	display: none;
+}
+/*add event calendar*/
 
+
+/*blogs back*/
 .cta {
 	border: none;
 	background: none;

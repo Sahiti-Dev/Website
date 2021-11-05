@@ -1,0 +1,56 @@
+
+         // Initialize Firebase (ADD YOUR OWN DATA)
+const config = {
+  apiKey: "AIzaSyAo_KIsYCI2Q_Gc1QYPEky9JQTZsQ0gv_4",
+  authDomain: "sign-ups-bd8bc.firebaseapp.com",
+  databaseURL: "https://sign-ups-bd8bc-default-rtdb.firebaseio.com",
+  projectId: "sign-ups-bd8bc",
+  storageBucket: "sign-ups-bd8bc.appspot.com",
+  messagingSenderId: "993827906700",
+  appId: "1:993827906700:web:0d7d48e7a1d9799a8b47a9",
+  measurementId: "G-QRSVL6M4BR"
+};
+firebase.initializeApp(config);
+
+// Reference messages collection
+var messagesRef = firebase.database().ref('messages');
+
+// Listen for form submit
+document.getElementById('contactForm').addEventListener('submit', submitForm);
+
+// Submit form
+function submitForm(e1){
+  e1.preventDefault();
+  console.log(123);
+  // Get values
+  var name = getInputVal('name');
+  var email = getInputVal('email');
+
+  // Save message
+  saveMessage(name, email);
+
+  // Show alert
+  document.querySelector('.alert').style.display = 'block';
+
+  // Hide alert after 3 seconds
+  setTimeout(function(){
+    document.querySelector('.alert').style.display = 'none';
+  },3000);
+
+  // Clear form
+  document.getElementById('contactForm').reset();
+}
+
+// Function to get get form values
+function getInputVal(id){
+  return document.getElementById(id).value;
+}
+
+// Save message to firebase
+function saveMessage(name,email){
+  var newMessageRef = messagesRef.push();
+  newMessageRef.set({
+    name: name,
+    email:email
+  });
+}
