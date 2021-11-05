@@ -493,6 +493,11 @@ color: #25d366;
 .copyx{
 	visibility: hidden;
 }
+input,
+input::-webkit-input-placeholder {
+    font-size: 15px;
+    line-height: 3;
+}
 .breadcrumb {
     background-color: transparent;
 	padding-left: 0;
