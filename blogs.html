@@ -174,14 +174,20 @@
                                   <img class="card-img-top" src="https://picsum.photos/id/1000/100/50" alt="Card image cap">
                                   <div class="card-body">
                                     
-                                      <span><a href="https://sahiti-dev.herokuapp.com/blog1-Ugadi.html#cmt-b-1" target="blank"><svg style="float: right;"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#007aff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
-                                         <a style="float: right; padding-right: 4px;" href="https://sahiti-dev.herokuapp.com/blog1-Ugadi.html#disqus_thread" target="blank"></a></span>
+                                      <!-- <span><a href="https://sahiti-dev.herokuapp.com/blog1-Ugadi.html#cmt-b-1" target="blank"><svg style="float: right;"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#007aff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a> -->
+                                         <!-- <a style="float: right; padding-right: 4px;" href="https://sahiti-dev.herokuapp.com/blog1-Ugadi.html#disqus_thread" target="blank"></a></span> -->
+                                              
+                                      <span style="float: right;"><svg style="float: right;"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#007aff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
+                                         <a class="gc-counter" style="padding-right: 4px; color: #007aff;" data-url="https://sahiti-dev.herokuapp.com/blog1-Ugadi.html" data-uid="blog1" target="blank"></a></span>
+                                              
+                                         
                                       <h5 class="card-title"><a href="https://sahiti-dev.herokuapp.com/blog1-Ugadi.html" target="blank" style="color: #111343; line-height: 1.25;
                                         font-weight: 600;">Ugadi</a></h5>
                                       <span class="likebtn-wrapper" data-theme="custom" data-icon_l_c_v="green" data-icon_d_c_v="#000000" data-bg_c="#ffffff" data-bg_c_v="#ffffff" data-f_family="Comic Sans MS" data-identifier="item_1" data-counter_count="true" data-share_enabled="false" data-i18n_undislike_tooltip="Would like to tell us what went wrong?"></span>
                                     <a href="blog1-Ugadi.html" target="blank">
                                       <p class="card-text" style="cursor: pointer;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                       <a href="https://sahiti-dev.herokuapp.com/blog1-Ugadi.html" target="blank" style="display: block; text-align: end;">Read more...</a>
+                                      
                                       <blockquote class="blockquote mb-0">
                                         <footer class="blockquote-footer">By <cite title="Source Title">Nikhilesh Chand</cite></footer>
                                       </blockquote>
@@ -492,6 +498,31 @@ typingEffect(h1,150);
 }
     </script>
     
+<!--
+    You can add as many counter as you want.
+    Specify the url using the attribute: data-url="<your url here>"
+    (You can also add data-uid and data-guid attributes)
+-->
+
+
+<!--
+    Include this javascript code after your .gc-counters elements.
+
+  If you want to initialize counters on elements added to the DOM
+  after the page has been loaded, just call window.graphcomment_counter()
+-->
+<script type="text/javascript">
+  function __semio__onload__counter() {
+    __semio__helpers_counter('Sahititla')
+  }
+
+  (function() {
+    var gc = document.createElement('script'); gc.type = 'text/javascript'; gc.async = true;
+    gc.onload = __semio__onload__counter; gc.defer = true; gc.src = 'https://integration.graphcomment.com/helpers_counter.js?' + Date.now();
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
+  })();
+  
+</script>
     <script id="dsq-count-scr" src="//sahiti-dev-herokuapp-com.disqus.com/count.js" async></script>
     <script>DISQUSWIDGETS.getCount({reset: true});</script>
     <!-- <script src="js/jquery.min.js"></script> -->
