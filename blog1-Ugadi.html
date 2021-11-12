@@ -61,21 +61,7 @@
 </head>
 
 <body>
-    <script>
-        function SubForm (){
-            $.ajax({
-                url:'https://api.apispreadsheets.com/data/20133/',
-                type:'post',
-                data:$("#myForm").serializeArray(),
-                success: function(){
-                  alert("Form Data Submitted :)")
-                },
-                error: function(){
-                  alert("There was an error :(")
-                }
-            });
-        }
-        </script>
+    
     <style>
         div[data-role="form-footer"]{
             display: block;
@@ -216,8 +202,11 @@
                                 
                                 
                             </div> -->
-                            <iframe src="https://anchor.fm/rslash/embed/episodes/rMaliciouscompliance-Sue-Me--Sure--NO-WAIT-e195j6e" height="250px" width="800px" frameborder="0" scrolling="no"></iframe>
                             <!-- <iframe width="100%" height="200" scrolling="no" frameborder="no" allow="autoplay" src="https://kutt.it/sahitiherokublog1"></iframe> -->
+                            <div id="audio-iframe">
+                            <!-- <iframe src="https://anchor.fm/rslash/embed/episodes/rMaliciouscompliance-Sue-Me--Sure--NO-WAIT-e195j6e" height="250px" width="800px" frameborder="0" scrolling="no"></iframe> -->
+                            <iframe src="https://open.spotify.com/embed/show/1EOsWaKFW7dLs8ntjbFU3S?utm_source=generator&theme=0" width="100%" height="232" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                            </div>
                             <!-- <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-987361021" title="Tommy" target="_blank" style="color: #cccccc; text-decoration: none;">Tommy</a> · <a href="https://soundcloud.com/user-987361021/game-of-throne-intro/s-tMeQLEcANhr" title="Game Of Throne Intro" target="_blank" style="color: #cccccc; text-decoration: none;">Game Of Throne Intro</a></div> -->
                         </div>
 
@@ -271,7 +260,7 @@
                         <br>
                         <!-- ShareThis BEGIN --><div class="sharethis-inline-reaction-buttons"></div><!-- ShareThis END -->
                         <br><br><br><br> 
-                        <div id="graphcomment"></div>
+                        <!-- <div id="graphcomment"></div> -->
                         <!-- <div id="cmt-b-1">
                             <div id="disqus_thread"></div>
                         </div> -->
@@ -296,8 +285,17 @@
        <!-- Swiper JS for YT vedios carousal-->
   <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
   <script src="js/firebase.js"></script>
-  
-  <script type="text/javascript">
+  <script>
+    $('.sound').on('click', function() {
+    if ($('#audio-iframe').css('opacity') == 0) {
+        $('#audio-iframe').css('opacity', 1);
+    }
+    else {
+        $('#audio-iframe').css('opacity', 0);
+    }
+});
+  </script>
+  <!-- <script type="text/javascript">
     var __semio__params = {
       graphcommentId: "Sahititla", // make sure the id is yours
   
@@ -325,7 +323,7 @@
     })();
     
   
-  </script>
+  </script> -->
     <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
     <!-- <script type="text/javascript" src="js/paudio.js"></script> -->
     <script>

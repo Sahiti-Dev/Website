@@ -39,6 +39,8 @@
     <!-- Link Swiper's CSS -->
   
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171588218-1"></script>
 <script>
@@ -57,12 +59,17 @@
 </script>
 
 </head>
+<script>
+    var ploader = document.querySelector("h1");
 
+ploader.addEventListener("input", function() {
+    this.setAttribute("data-heading", this.innerText);
+});
+</script>
 <body id="main">  
 
-    <div class="loadmain" >
 
-        <div class="loadtext">
+        <!-- <div class="loadtext">
             <ul class="phrase">
               <li class="light-color">S</li>
               <li>A</li>
@@ -76,9 +83,14 @@
               <li class="light-color">A</li>
             </ul>
             
-        </div>
+        </div> -->
+    <div class="loadmain">
+        <h1 contenteditable data-heading="SAHITI TLA" id="ploader">
+            SAHITI TLA
+          </h1>
         <!-- <img class="loader-image" src="Photos/sahiti.png" alt="sahiti photos"> -->
-        <p class="loadtext-sub">- Telugu Literary Association</p>
+        
+        <p class="loadtext-sub" style="color: white; letter-spacing: 2px;">- Telugu Literary Association</p>
 
          <div class="loadtitle">
                SAHITI TLA
@@ -87,7 +99,7 @@
          <div class="loadbar">
                  <div id="fill"></div>
          </div>
-</div>
+    </div>
 
     <header class="header-area">
         <div class="progress1">
