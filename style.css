@@ -2439,7 +2439,7 @@ height: 40px;
   position: fixed;
   top: 0px;
   left: 0px;
-  background: #0c0c0c;
+  background: linear-gradient(to right, #fc5c7d, #6a82fb);
   z-index: 9999;
 }
 
@@ -2541,7 +2541,3 @@ height: 40px;
   left: 0px;
 }
 
-.extra-card{
-  border: none;
-  background-color: #15239C;
-}

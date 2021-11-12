@@ -380,8 +380,33 @@ you can use the generic selector below, but it's slower:
 /*add event calendar*/
 
 
+#audio-iframe {
+	opacity: 0;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+  }
+  
+  .audiostagger-menu{
+	margin-bottom: 8px;
+	font-size: 18px;
+	opacity: 0;
+	transform: translateX(100%);
+	transition-property: opacity, transform;
+	transition-duration: 0.3s;
+	transition-timing-function: cubic-bezier(0.750, -0.015, 0.565, 1.055);
+  }
+  
+  .audiomenu-toggler:checked ~ .audiostagger-menu  {
+	opacity: 1;
+	transform: translateX(0);
+	transition-delay: calc(0.055s * var(--i));
+  }
+
 /*blogs back*/
-.cta {
+/* .cta {
 	border: none;
 	background: none;
    }
@@ -405,7 +430,7 @@ you can use the generic selector below, but it's slower:
    
    .cta:active svg {
 	transform: scale(0.9);
-   }/*blogs back*/
+   }blogs back */
    
  /*volume icon */
 .sound {
