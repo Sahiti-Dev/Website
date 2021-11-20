@@ -46,6 +46,7 @@
 <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -57,7 +58,6 @@
         $('#footer').load('footer.html');
     });
 </script>
- 
 </head>
 
 <body>
@@ -232,10 +232,10 @@
                         <div class="mt-5" style="text-align: end;">
                             — By <i>Nikhilesh Chand</i>
                         </div>
-                        <br><br>
+                        <br><br><br><br>
                         <div style="font-weight: bold; font-size: 25px; text-align: center;"><span style="border-bottom: 2px solid black;">Subscribe To Us</span></div>
                               
-                              <div class="container">
+                              <!-- <div class="container">
                                 <div class="col-md-4 mx-auto bg-white shadow p-3 py-5 mt-5">
                                   <form id="contactForm" name="contact-form">
                                     <div class="alert">Your message has been sent</div>
@@ -251,9 +251,27 @@
                                     <button type="submit" id="subs">SUBSCRIBE NOW</button>
                                   </form>
                                 </div>
+                              </div> -->
+                              
+                              <div>
+                                <div id="progress"></div>
+
+                                <div class="center">
+                                  <div id="register"> 
+                                    
+                                    <i id="previousButton" class="ion-android-arrow-back"></i> 
+                                    <i id="forwardButton" class="ion-android-arrow-forward"></i>
+                                    
+                                    <div id="inputContainer">
+                                      <input id="inputField"  required multiple />
+                                      <label id="inputLabel"></label>
+                                      <div id="inputProgress"></div>
+                                    </div>
+                                    
+                                  </div>
+                                </div>
                               </div>
 
-                        <br><br>
                         <div style="text-align: center;" class="mt-5">
                         What do you think?
                         </div>
@@ -282,6 +300,7 @@
             </div>
 
     <div id="footer"></div>
+    
        <!-- Swiper JS for YT vedios carousal-->
   <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
   <script src="js/firebase.js"></script>
@@ -328,6 +347,15 @@
     
   
   </script> -->
+  <script>
+    function removeautofocus() {
+      jQuery('input[type=text]').blur();
+      /*
+      //For putting the Focus on particular field
+      jQuery('[id$=pList]').focus();
+      */
+  };
+  </script>
     <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
     <!-- <script type="text/javascript" src="js/paudio.js"></script> -->
     <script>
