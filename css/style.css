@@ -21,11 +21,132 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+/*new signup form*/
+
+/* https://codepen.io/arcs/pen/rYXrNQ*/
+  /* https://codepen.io/arcs/pen/OmZaex*/
+  h1 {
+	position: relative;
+	color: #25a3ff;
+	opacity: 0;
+	transition: .8s ease-in-out;
+	font-size: 26px;
+  }
+  
+  
+  .center {
+	height: 50vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  
+  #register {
+	background: #fff;
+	position: relative;
+	width: 550px;
+	box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
+	transition: transform .1s ease-in-out;
+  }
+  
+  #register.close {
+	width: 0;
+	padding: 0;
+	overflow: hidden;
+	transition: .8s ease-in-out;
+	box-shadow: 0 16px 24px 2px rgba(0,0,0,0);
+  }
+  
+  #forwardButton {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	font-size: 40px;
+	color: #25a3ff;
+	float: right;
+	cursor: pointer;
+	z-index: 20
+  }
+  #previousButton {
+	position: absolute;
+	font-size: 18px;
+	left: 30px; /* same as padding on container */
+	top: 12px;
+	z-index: 20;
+	color: #25a3ff;
+	float: right;
+	cursor: pointer;
+  }
+  #previousButton:hover {color: #333}
+  #forwardButton:hover {color: #333}
+  .wrong #forwardButton {color: #ff2d26}
+  .close #forwardButton, .close #previousButton {color: #fff}
+  
+  #inputContainer {
+	position: relative;
+	padding: 30px 20px 20px 20px;
+	margin: 10px 60px 10px 10px;
+	opacity: 0;
+	transition: opacity .3s ease-in-out;
+  }
+  
+  #inputContainer input {
+	position: relative;
+	width: 100%;
+	border: none;
+	font-size: 20px;
+	font-weight: bold;
+	outline: 0;
+	background: transparent;
+	box-shadow: none;
+	font-family: 'Noto Sans', sans-serif;
+  }
+  
+  #inputLabel {
+	position: absolute;
+	pointer-events: none;
+	top: 32px; /* same as container padding + margin */
+	left: 20px; /* same as container padding */
+	font-size: 20px;
+	font-weight: bold;
+	transition: .2s ease-in-out;
+  }
+  
+  #inputContainer input:valid + #inputLabel {
+	top: 6px;
+	left: 42px; /* space for previous arrow */
+	margin-left: 0!important;
+	font-size: 11px;
+	font-weight: normal;
+	color: #9e9e9e;
+  }
+  
+  #inputProgress {
+	border-bottom: 3px solid #25a3ff;
+	width: 0;
+	transition: width .6s ease-in-out;
+  }
+  
+  .wrong #inputProgress {
+	border-color: #ff2d26;
+  }
+  
+  @media (max-width: 420px) {
+	#forwardButton {right: 10px}
+	#previousButton {left: 10px}
+	#inputLabel {left: 0}
+	#inputContainer {padding-left: 0; margin-right:20px}
+  }
+  
+/*new signup form*/
+
+
 
 /* signup form in blog*/
 /* https://codepen.io/arcs/pen/	OmZaex*/
 /* https://www.codingnepalweb.com/responsive-contact-us-form-html-css/*/
-.alert{
+/* .alert{
 	text-align: center;
 	padding:10px;
 	background:#79c879;
@@ -62,7 +183,6 @@
  left: 0;
  right: 0;
  bottom: 0;
- background: linear-gradient(45deg, transparent 3%, #00e6f6 3%, #00e6f6 5%, #ff013c 5%);
  text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
  clip-path: var(--slice-0);
 }
@@ -128,110 +248,6 @@
   transform: translate(0);
  }
 }
-
-#progress {
-	position: absolute;
-	background: white;
-	height: 10vh;
-	width: 0;
-	transition: width 0.2s ease-in-out;
-  }
-  
-  .center {
-	height: 10vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  }
-  
-  /******
-	Form
-   ******/
-  
-  #register {
-	background: #fff;
-	position: relative;
-	width: 410px;
-	padding: 2px 15px 20px 15px;
-	box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
-	transition: transform .1s ease-in-out;
-  }
-  
-  #register.close {
-	width: 0;
-	padding: 0;
-	overflow: hidden;
-	transition: .8s ease-in-out;
-	box-shadow: 0 16px 24px 2px rgba(0,0,0,0);
-  }
-  
-  .next {
-	position: absolute;
-	right: 20px;
-	bottom: 10px;
-	font-size: 40px;
-	color: #25a3ff;
-	float: right;
-	cursor: pointer;
-  }
-  .next:hover {color: #333}
-  .wrong .next {color: #ff2d26}
-  .close .next {color: #fff}
-  
-  #inputContainer {
-	position: relative;
-	opacity: 0;
-	width: 350px;
-	margin-top: 25px;
-	transition: opacity .3s ease-in-out;
-  }
-  
-  #inputContainer input {
-	width: 100%;
-	padding: 0 5px;
-	border: none;
-	font-size: 20px;
-	font-weight: bold;
-	outline: 0;
-	background: transparent;
-	box-shadow:none;
-  }
-  ha {
-	position: absolute;
-	color: #000;
-	font-size: large;
-	opacity: 0;
-	transition: .8s ease-in-out;
-  }
-  #inputLabel {
-	position: absolute;
-	pointer-events: none;
-	top: 0;
-	left: 0;
-	font-size: 20px;
-	font-weight: bold;
-	padding: 0 5px;
-	transition: .2s ease-in-out;
-  }
-  
-  #inputContainer input:valid + #inputLabel {
-	top: -15px;
-	font-size: 11px;
-	font-weight: normal;
-	color: #9e9e9e;
-  }
-  
-  #inputProgress {
-	position: absolute;
-	border-bottom: 2px solid #25a3ff;
-	padding: 3px 0;
-	width: 0;
-	transition: width .6s ease-in-out;
-  }
-  
-  .wrong #inputProgress {
-	border-color: #ff2d26;
-  }
 
 /* contact form in blog*/
 
@@ -312,6 +328,7 @@ you can use the generic selector below, but it's slower:
 }
  /* podcast player css */
 /*toggle button*/
+
 .checkbox-con {
 	margin: 10px;
 	display: flex;
@@ -331,14 +348,13 @@ you can use the generic selector below, but it's slower:
    
    .checkbox-con input[type="checkbox"]::before {
 	content: "";
-	width: 14px;
-	height: 14px;
+	width: 15px;
+	height: 15px;
 	background: rgba(234, 7, 7, 0.5);
 	border: 2px solid #ea0707;
 	border-radius: 50%;
 	position: absolute;
-	top: 2px;
-	left: 0;
+	top: 1.7px;
 	transform: translate(30%, 15%);
 	transition: all 0.3s ease-in-out;
    }
@@ -346,8 +362,6 @@ you can use the generic selector below, but it's slower:
    .checkbox-con input[type="checkbox"]::after {
 	content: url("data:image/svg+xml,%3Csvg xmlns='://www.w3.org/2000/svg' width='23' height='23' viewBox='0 0 23 23' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.55021 5.84315L17.1568 16.4498L16.4497 17.1569L5.84311 6.55026L6.55021 5.84315Z' fill='%23EA0707' fill-opacity='0.89'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17.1567 6.55021L6.55012 17.1568L5.84302 16.4497L16.4496 5.84311L17.1567 6.55021Z' fill='%23EA0707' fill-opacity='0.89'/%3E%3C/svg%3E");
 	position: absolute;
-	top: 0;
-	left: 20px;
    }
    
    .checkbox-con input[type="checkbox"]:checked {
@@ -360,6 +374,7 @@ you can use the generic selector below, but it's slower:
 	border: 2px solid #02c202;
 	transform: translate(240%, 13%);
 	transition: all 0.3s ease-in-out;
+	left: -4px;
    }
    
    
@@ -369,7 +384,6 @@ you can use the generic selector below, but it's slower:
 	cursor: pointer;
 	user-select: none;
    }
-   
 
 /*toggle button*/
 
@@ -518,11 +532,7 @@ color: #25d366;
 .copyx{
 	visibility: hidden;
 }
-input,
-input::-webkit-input-placeholder {
-    font-size: 15px;
-    line-height: 3;
-}
+
 .breadcrumb {
     background-color: transparent;
 	padding-left: 0;
