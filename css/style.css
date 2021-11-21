@@ -34,7 +34,7 @@
 	display:none;
   }
   
-button,
+#subs,
 #subs::after {
  padding: 16px 20px;
  font-size: 18px;
