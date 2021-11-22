@@ -235,7 +235,7 @@
                         <br><br><br><br>
                         <div style="font-weight: bold; font-size: 25px; text-align: center;"><span style="border-bottom: 2px solid black;">Subscribe To Us</span></div>
                               
-                              <div class="container">
+                              <div class="container" style="margin-bottom: 25vh;">
                                 <div class="col-md-4 mx-auto bg-white shadow p-3 py-5 mt-5">
                                   <form id="contactForm" name="contact-form">
                                     <div class="alert">Your message has been sent</div>
@@ -253,7 +253,7 @@
                                 </div>
                               </div>
                               
-                              
+                             
 
                         <div style="text-align: center;" class="mt-5">
                         What do you think?
@@ -265,6 +265,13 @@
                         <!-- <div id="cmt-b-1">
                             <div id="disqus_thread"></div>
                         </div> -->
+                        <div>
+                          <div class="container">
+                            
+                            <main>
+                              <div class="wildfire_thread"></div>
+                            </main>
+                          </div>
                         
                         <br><br>
                         <a href="blogs.html" style="color: rgb(0, 122, 255);"> <i class="fa fa-chevron-left"></i> More Blogs</a>
@@ -284,6 +291,32 @@
 
     <div id="footer"></div>
     
+    <script>
+      var wildfireConfig = () => ({
+        databaseProvider: 'firebase',
+        databaseConfig: {
+          
+      apiKey: "AIzaSyD5PpefaxvCCbUy3_GXMILrz4Bvsz1p0M0",
+      authDomain: "wildfire-1bd06.firebaseapp.com",
+      databaseURL: "https://wildfire-1bd06-default-rtdb.firebaseio.com",
+      projectId: "wildfire-1bd06",
+      storageBucket: "wildfire-1bd06.appspot.com",
+      messagingSenderId: "825758766449",
+      appId: "1:825758766449:web:dd7fb5e71aeba6170c92d0",
+      measurementId: "G-79RDKJ1YJQ"
+        },
+        pageURL: 'http://chengkang.me/wildfire',
+        pageTitle: 'Wildfire Demo',
+        theme: 'light',
+        
+        // locale: 'en'
+        locale: 'en'
+    });
+
+    
+  </script>
+  <script src="https://unpkg.com/wildfire@0.3.8/dist/wildfire.auto.js"></script>
+
        <!-- Swiper JS for YT vedios carousal-->
   <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
   <script src="js/firebase.js"></script>
@@ -295,12 +328,13 @@
     else {
         $('#audio-iframe').css('opacity', 0);
     }
-});
-  </script>
-  <script>
-     $(function () {
-  $('[data-toggle="popover"]').popover()});
-    </script>
+});</script>
+
+
+  
+
+
+
   <!-- <script type="text/javascript">
     var __semio__params = {
       graphcommentId: "Sahititla", // make sure the id is yours
