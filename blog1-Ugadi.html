@@ -261,12 +261,12 @@
                         <br>
                         <!-- ShareThis BEGIN --><div class="sharethis-inline-reaction-buttons"></div><!-- ShareThis END -->
                         <br><br><br><br> 
-                        <!-- <div id="graphcomment"></div> -->
+                        <div id="graphcomment"></div>
                         <!-- <div id="cmt-b-1">
                             <div id="disqus_thread"></div>
                         </div> -->
-                        <div><div class="wildfire_thread"></div>
-                         </div> 
+                        <!-- <div><div class="wildfire_thread"></div>
+                         </div>  -->
                         
                         <br><br>
                         <a href="blogs.html" style="color: rgb(0, 122, 255);"> <i class="fa fa-chevron-left"></i> More Blogs</a>
@@ -286,7 +286,7 @@
 
     <div id="footer"></div>
     
-    <script>
+    <!-- <script>
       var wildfireConfig = () => ({
         databaseProvider: 'firebase',
         databaseConfig: {
@@ -308,11 +308,13 @@
 
   </script>
   
-<script src="https://unpkg.com/@chengkang/wildfire/dist/wildfire.auto.js"></script>
+<script src="https://unpkg.com/@chengkang/wildfire/dist/wildfire.auto.js"></script> -->
 
        <!-- Swiper JS for YT vedios carousal-->
-  <!-- <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
-  <script src="js/firebase.js"></script> -->
+  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  <script src="js/firebase.js"></script>
+
+  
   <script>
     $('.sound').on('click', function() {
     if ($('#audio-iframe').css('opacity') == 0) {
@@ -327,8 +329,7 @@
   
 
 
-
-  <!-- <script type="text/javascript">
+ <script type="text/javascript">
     var __semio__params = {
       graphcommentId: "Sahititla", // make sure the id is yours
   
@@ -356,18 +357,10 @@
     })();
     
   
-  </script> -->
-  <script>
-    function removeautofocus() {
-      jQuery('input[type=text]').blur();
-      /*
-      //For putting the Focus on particular field
-      jQuery('[id$=pList]').focus();
-      */
-  };
   </script>
+  
     <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
-    <!-- <script type="text/javascript" src="js/paudio.js"></script> -->
+    <script type="text/javascript" src="js/paudio.js"></script> 
     <script>
         $('.sound').click(function() {
   $(this).toggleClass('sound-mute');
